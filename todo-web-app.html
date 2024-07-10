@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do List</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    #todo-list {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .completed {
+        text-decoration: line-through;
+    }
+</style>
+</head>
+<body>
+
+<div id="todo-list">
+    <h2>To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Add New Task">
+    <button onclick="addTask()">Add</button>
+    <ul id="tasks"></ul>
+</div>
+
+<script>
+    function addTask() {
+        var taskInput = document.getElementById("taskInput");
+        var taskText = taskInput.value.trim();
+
+        if (taskText !== "") {
+            var taskList = document.getElementById("tasks");
+            var newTask = document.createElement("li");
+            newTask.innerHTML = `
+                <input type="checkbox" onchange="toggleTaskCompletion(this)">
+                <span>${taskText}</span>
+                <button onclick="deleteTask(this)">Delete</button>
+            `;
+            taskList.appendChild(newTask);
+            taskInput.value = "";
+        }
+    }
+
+    function toggleTaskCompletion(checkbox) {
+        var taskText = checkbox.nextElementSibling;
+        if (checkbox.checked) {
+            taskText.classList.add("completed");
+        } else {
+            taskText.classList.remove("completed");
+        }
+    }
+
+    function deleteTask(button) {
+        var taskItem = button.parentElement;
+        taskItem.remove();
+    }
+</script>
+
+</body>
+</html>
