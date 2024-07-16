@@ -21,7 +21,8 @@
     background-color: #f2f2f2;
 }
 .mt tr:hover {
-    background-color: #e0e0e0;
+    background-color: #535353;
+    color: #e3e1e1;
 }
 
 .mt td{
@@ -34,7 +35,6 @@
     margin-top  : 20px;
 
 }
-
 
 .pad{
     background-color: #000000;
