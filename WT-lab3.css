@@ -57,10 +57,12 @@ input[type="reset"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 
-input[type="submit"] {
+input[type="submit"]  {
     background-color: #4CAF50;
     color: white;
 }
@@ -73,4 +75,15 @@ input[type="reset"] {
 input[type="radio"],
 input[type="checkbox"] {
     margin-top: 15px;
+}
+
+
+form input[type="submit"]:hover {
+    background: rgb(1, 132, 1); /* Slightly darker gradient on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+form input[type="reset"]:hover {
+    background: rgb(183, 1, 1); /* Slightly darker gradient on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
 }
