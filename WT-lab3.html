@@ -3,52 +3,65 @@
     <head>
         <title>Personal Data Form</title>
         <h1 align="center">Personal Data Form</h1>
+        <link rel="stylesheet" href="WT-lab3.css"
         <hr>
 
     </head>
-    <form>
-        <br>
-        <label for="fname">First Name: </label><br>
-        <input type="text" id="fname" name="firstname" value="fname">
-        <br><br>
-        <label for="lname">Last Name: </label><br>
-        <input type="text" id="lname" name="lastname" value="lname">
-        <br><br>
-        <label for="email">E-mail: </label><br>
-        <input type="email" id="email" name="mail" value="email">
-        <br><br>
-        <input type="submit" onclick="alert('Submit successfull')" name="submit">
-        <input type="reset" onclick="alert('Reset Successfull')" name="reset"><br><br>
+    <body class="basics">
+        <form>
+            <br>
+            <label for="fname">First Name: </label><br>
+            <input type="text" id="fname" name="firstname" required >
+            <br><br>
+            <label for="lname">Last Name: </label><br>
+            <input type="text" id="lname" name="lastname" >
+            <br><br>
+            <label for="email">E-mail: </label><br>
+            <input type="email" id="email" name="mail" >
+            <br><br>
+            <input type="submit" onclick="alert('Submit successfull')" name="submit">
+            <input type="reset" onclick="alert('Reset Successfull')" name="reset"><br><br>
 
-        <label for="male">Male</label>
-        <input type="radio" id="male" name="gender" value="Male" value="male">
-        <br>
-        <label for="female">Female</label>
-        <input type="radio" id="female" name="gender" value="Female" value="female">
-        <br><br>
-        <label for="adult">Adult (18+) ? :</label>
-        <select id="adult" name="adult">
-            <option value="YES">Yes</option>
-            <option value="NO">No</option>
-        </select>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="Male" value="male">
+            <br>
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="Female" value="female">
+            <br><br>
+            <label for="adult">Adult (18+) ? :</label>
+            <select id="adult" name="adult">
+                <option value="YES">Yes</option>
+                <option value="NO">No</option>
+            </select>
 
-        <br><br>
-        <input type="checkbox" id="Cricket" name="hobbies" value="Cricket">
-        <label for="Cricket">Cricket</label>
+            <br><br>
+            <input type="checkbox" id="Cricket" name="hobbies" value="Cricket">
+            <label for="Cricket">Cricket</label>
 
-        <br>
+            <br>
 
-        <input type="checkbox" id="Badminton" name="hobbies" value="Badminton">
-        <label for="Badminton">Badminton</label>
+            <input type="checkbox" id="Badminton" name="hobbies" value="Badminton">
+            <label for="Badminton">Badminton</label>
 
-        <br>
+            <br>
 
-        <input type="checkbox" id="Football" name="hobbies" value="Football">
-        <label for="Football">Football</label>
+            <input type="checkbox" id="Football" name="hobbies" value="Football">
+            <label for="Football">Football</label>
 
-        <br><br>
+            <br><br>
 
-        <label for="birthday">Birthday : </label>
-        <input type="date" id="birthday" name="birthday" value="birthday">
-    </form>
+            <label for="birthday">Birthday : </label>
+            <input type="date" id="birthday" name="birthday" value="birthday"> 
+
+            <br><br>
+
+            <label for="number">Phone Number : </label>
+            <input type="tel" name="number" id="number">
+            
+            <br><br>
+
+            <canvas id="c" width="200" height="100" style="border:1px solid #000000;"></canvas>
+
+        </form>
+    </body>
 </html>
