@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8"> <!-- Specifies the character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport settings -->
+    <meta name="description" content="A personal data form for collecting user information."> <!-- Page description -->
+    <meta name="keywords" content="personal, data, form, user information"> <!-- Keywords for search engines (optional) -->
+    <meta name="author" content="Bhavya Mistry"> <!-- Author of the document -->
     <title>Personal Data Form</title>
     <link rel="stylesheet" type="text/css" href="WT-lab3.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Personal Data Form</h1>
-        <form>
-            <label for="fname">First Name:</label>
-            <input type="text" id="fname" name="firstname" required>
-            
-            <label for="lname">Last Name:</label>
-            <input type="text" id="lname" name="lastname">
-            
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="mail">
-            
-            <label>Gender:</label>
-            <label for="male">
-                <input type="radio" id="male" name="gender" value="Male"> Male
-            </label>
-            <label for="female">
-                <input type="radio" id="female" name="gender" value="Female"> Female
-            </label>
-            
-            <label for="adult">Adult (18+) ?:</label>
-            <select id="adult" name="adult">
-                <option value="YES">Yes</option>
-                <option value="NO">No</option>
-            </select>
-            
-            <label>Hobbies:</label>
-            <label for="Cricket">
-                <input type="checkbox" id="Cricket" name="hobbies" value="Cricket"> Cricket
-            </label>
-            <label for="Badminton">
-                <input type="checkbox" id="Badminton" name="hobbies" value="Badminton"> Badminton
-            </label>
-            <label for="Football">
-                <input type="checkbox" id="Football" name="hobbies" value="Football"> Football
-            </label>
-            
-            <label for="birthday">Birthday:</label>
-            <input type="date" id="birthday" name="birthday">
-            
-            <label for="number">Phone Number:</label>
-            <input type="tel" id="number" name="number">
-            
-            <input type="submit" value="Submit" onclick="alert('Submit successful')">
-            <input type="reset" value="Reset" onclick="alert('Reset successful')">
-            
-            <canvas id="c" width="200" height="100" style="border:1px solid #000000; margin-top: 10px;"></canvas>
-        </form>
+    <div class="container" >
+        <h1>Personal Data Form</h1><hr><br>
+        <div class="formtest">
+            <form>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="firstname" required>
+                <br><br>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lastname">
+                <br><br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="mail">
+                <br><br>
+                <label>Gender:</label><br><br>
+                <label for="male">
+                    <input type="radio" id="male" name="gender" value="Male"> Male
+                </label>
+                <label for="female">
+                    <input type="radio" id="female" name="gender" value="Female"> Female
+                </label>
+                <br><br>
+                <label for="adult">Adult (18+) ?:</label>
+                <select id="adult" name="adult">
+                    <option value="YES">Yes</option>
+                    <option value="NO">No</option>
+                </select>
+                <br><br>
+                <label>Hobbies:</label><br><br>
+                <label for="Cricket">
+                    <input type="checkbox" id="Cricket" name="hobbies" value="Cricket"> Cricket
+                </label>
+                
+                <label for="Badminton">
+                    <input type="checkbox" id="Badminton" name="hobbies" value="Badminton"> Badminton
+                </label>
+                
+                <label for="Football">
+                    <input type="checkbox" id="Football" name="hobbies" value="Football"> Football
+                </label>
+                <br><br>
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday">
+                <br><br>
+                <label for="number">Phone Number:</label>
+                <input type="tel" id="number" name="number">
+                <br><br>
+                <input type="submit" value="Submit" onclick="alert('Submit successful')">
+                <input type="reset" value="Reset" onclick="alert('Reset successful')">
+
+
+            </form>
+        </div>
     </div>
 </body>
 </html>
