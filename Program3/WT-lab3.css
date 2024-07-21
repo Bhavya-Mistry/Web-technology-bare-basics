@@ -65,23 +65,26 @@ input[type="reset"] {
     padding-right: 40px;
 }
 input[type="submit"]  {
-    background-color: #4CAF50;
+    background-color: #ffffff18;
     color: white;
     margin-right: 10px;
 }
 input[type="reset"] {
-    background-color: #f44336;
+    background-color: #ffffff18;
     color: white;
+    margin-left: 10px;
 }
 input[type="radio"],
 input[type="checkbox"] {
     margin-top: 15px;
 }
 form input[type="submit"]:hover {
-    background: rgb(1, 132, 1); /* Slightly darker gradient on hover */
+    background: rgba(1, 132, 1, 0.9); /* Slightly darker gradient on hover */
     transform: scale(1.1); /* Slightly enlarge the button on hover */
+    transition: transform 0.5s ease;
 }
 form input[type="reset"]:hover {
     background: rgb(183, 1, 1); /* Slightly darker gradient on hover */
     transform: scale(1.1); /* Slightly enlarge the button on hover */
+    transition: transform 0.5s ease;
 }
