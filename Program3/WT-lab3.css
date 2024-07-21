@@ -10,28 +10,26 @@ body{
     text-align: center;
     justify-content: center;
     display: flex;
-    background:/* linear-gradient(90deg, rgba(245, 247, 250, 0.8), rgba(0, 0, 0, 0.8)),  */
-                url('..//images/photo-1614851099511-773084f6911d.avif') no-repeat center center fixed;
+    background:url('..//images/photo-1614851099511-773084f6911d.avif') no-repeat center center fixed;
     background-size: cover;
-    background-blend-mode: overlay;
 }
 .container{
     background-color: #ffffff;;
     padding-top: 50px;
-    padding-right:250px ;
-    padding-left:250px ;
+    padding-right:200px ;
+    padding-left:200px ;
     padding-bottom: 50px; 
     margin-top:50px;
     margin-bottom:50px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgb(125, 125, 125);
-    width: 300px;
+    width: 350px;
     background-color: rgba(88, 88, 88, 0.566);
     color: #FFFFFF;
 }
 h1 {
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffffd4;
 }
 label {
     margin-top: 0px;
