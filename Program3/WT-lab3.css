@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(190deg, #f5f7fa, #80a1d5);
+    
     font-family: Arial, Helvetica, sans-serif;
     color: #2e2e2e;
     align-content: center;
@@ -10,39 +10,49 @@ body{
     text-align: center;
     justify-content: center;
     display: flex;
-    background-color: #eaeaed;
-    background: url('images/imagess.jpg')
+    background:/* linear-gradient(90deg, rgba(245, 247, 250, 0.8), rgba(0, 0, 0, 0.8)),  */
+                url('..//images/photo-1614851099511-773084f6911d.avif') no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
 }
 .container{
     background-color: #ffffff;;
     padding-top: 50px;
-    padding-right:150px ;
-    padding-left:150px ;
+    padding-right:250px ;
+    padding-left:250px ;
     padding-bottom: 50px; 
     margin-top:50px;
     margin-bottom:50px;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgb(125, 125, 125);
     width: 300px;
+    background-color: rgba(88, 88, 88, 0.566);
+    color: #FFFFFF;
 }
 h1 {
     text-align: center;
-    color: #000000;
+    color: #FFFFFF;
 }
 label {
     margin-top: 0px;
-    color: #3c3c3c;
+    color: #dcdcdc;
 }
+
 input[type="text"],
 input[type="email"],
 input[type="date"],
 input[type="tel"],
 select {
+    color: white;
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 100%;
+    background-color: rgba(224, 224, 224, 0.267);
+    border: none;
+
+
 }
 input[type="submit"],
 input[type="reset"] {
@@ -57,6 +67,7 @@ input[type="reset"] {
 input[type="submit"]  {
     background-color: #4CAF50;
     color: white;
+    margin-right: 10px;
 }
 input[type="reset"] {
     background-color: #f44336;
