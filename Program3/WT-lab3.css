@@ -27,6 +27,7 @@ body{
     background-color: rgba(88, 88, 88, 0.566);
     color: #FFFFFF;
 }
+
 h1 {
     text-align: center;
     color: #ffffffd4;
@@ -52,16 +53,19 @@ select {
 
 
 }
-input[type="submit"],
-input[type="reset"] {
-    padding: 10px;
-    margin-top: 10px;
+input[type="submit"], input[type="reset"] {
+    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
-    padding-left: 40px;
-    padding-right: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition */
 }
+
 input[type="submit"]  {
     background-color: #ffffff18;
     color: white;
@@ -76,13 +80,20 @@ input[type="radio"],
 input[type="checkbox"] {
     margin-top: 15px;
 }
+
+input:focus, select:focus {
+    border-color: #ffffff; /* Highlight border color */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.648); /* Subtle shadow effect */
+}
+
 form input[type="submit"]:hover {
-    background: rgba(1, 132, 1, 0.9); /* Slightly darker gradient on hover */
+    background: linear-gradient(45deg, #4caf4fe1, #03810ad6); /* Slightly darker gradient on hover */
     transform: scale(1.1); /* Slightly enlarge the button on hover */
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
 }
 form input[type="reset"]:hover {
-    background: rgb(183, 1, 1); /* Slightly darker gradient on hover */
+    background: linear-gradient(45deg, #ff1414d7, hsla(0, 95%, 23%, 0.849)); /* Slightly darker gradient on hover */
     transform: scale(1.1); /* Slightly enlarge the button on hover */
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
 }
