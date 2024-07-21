@@ -1,86 +1,75 @@
-/* Importing a Google Font for a modern look */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-body {
-    background: linear-gradient(90deg, #f5f7fa, #80a1d5);
-    font-family: 'Roboto', sans-serif;
+body{
+    background: linear-gradient(190deg, #f5f7fa, #80a1d5);
+    font-family: Arial, Helvetica, sans-serif;
     color: #2e2e2e;
-    display: flex;
-    justify-content: center;
+    align-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
+    margin-top: auto;
+    margin-left: auto;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    background-color: #eaeaed;
+    
 }
-
-.container {
-    background-color: #ffffff;
-    padding: 50px;
-    margin: 20px;
+.container{
+    background-color: #ffffff;;
+    padding-top: 50px;
+    padding-right:150px ;
+    padding-left:150px ;
+    padding-bottom: 50px; 
+    margin-top:50px;
+    margin-bottom:50px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
+    width: 300px;
 }
-
 h1 {
     text-align: center;
     color: #000000;
 }
-
 label {
-    margin-top: 10px;
+    margin-top: 0px;
     color: #3c3c3c;
-    font-weight: 500;
 }
-
 input[type="text"],
 input[type="email"],
 input[type="date"],
 input[type="tel"],
 select {
-    padding: 10px;
+    padding: 8px;
     margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
     width: 100%;
-    box-sizing: border-box;
 }
-
 input[type="submit"],
 input[type="reset"] {
-    padding: 10px 40px;
+    padding: 10px;
     margin-top: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
+    padding-left: 40px;
+    padding-right: 40px;
 }
-
-input[type="submit"] {
+input[type="submit"]  {
     background-color: #4CAF50;
     color: white;
-    transition: background-color 0.3s, transform 0.3s;
 }
-
 input[type="reset"] {
     background-color: #f44336;
     color: white;
-    transition: background-color 0.3s, transform 0.3s;
 }
-
 input[type="radio"],
 input[type="checkbox"] {
-    margin-top: 10px;
+    margin-top: 15px;
 }
-
 form input[type="submit"]:hover {
     background: rgb(1, 132, 1); /* Slightly darker gradient on hover */
     transform: scale(1.1); /* Slightly enlarge the button on hover */
 }
-
 form input[type="reset"]:hover {
     background: rgb(183, 1, 1); /* Slightly darker gradient on hover */
     transform: scale(1.1); /* Slightly enlarge the button on hover */
