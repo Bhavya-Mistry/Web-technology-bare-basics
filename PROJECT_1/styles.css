@@ -57,7 +57,7 @@ nav ul li a:hover {
 
 .hero {
     background: url('..//images/porsche4.jpg') no-repeat center center/cover;
-    height: 120vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +92,7 @@ nav ul li a:hover {
 
 .hero p {
     font-size: 1.5em;
-    margin-bottom: 30px;
+    margin-bottom: 300px;
 }
 
 .hero .btn {
