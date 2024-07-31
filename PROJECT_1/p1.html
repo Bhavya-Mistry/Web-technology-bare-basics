@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Car Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#models">Car Models</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Cool Car Website</h1>
+            <p>Discover the best cars of the year!</p>
+            <a href="#models" class="btn">Explore Models</a>
+        </div>
+    </section>
+    
+    <section id="models">
+        <h2>Our Car Models</h2>
+        <div class="car-grid">
+            <div class="car-card">
+                <img src="..\images\porsche1.png" alt="Car 1">
+                <h3>Model X</h3>
+                <p>Top speed: 250 km/h</p>
+                <p>Price: $50,000</p>
+            </div>
+            <div class="car-card">
+                <img src="..\images\porsche1.png" alt="Car 2">
+                <h3>Model Y</h3>
+                <p>Top speed: 230 km/h</p>
+                <p>Price: $45,000</p>
+            </div>
+            <div class="car-card">
+                <img src="..\images\porsche1.png" alt="Car 3">
+                <h3>Model Z</h3>
+                <p>Top speed: 280 km/h</p>
+                <p>Price: $60,000</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Cool Car Website is a leading car dealership offering the best models of the year. We pride ourselves on providing exceptional service and the latest vehicles to our customers. Our mission is to bring the joy of driving to everyone with our top-notch cars and personalized customer service.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Cool Car Website. All rights reserved.</p>
+        <p>Follow us on:
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+/* Reset some default browser styles */
+body, html, ul, li, p, h1, h2, h3, img, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: #e74c3c;
+}
+
+.hero {
+    background: url('..//images/porsche1.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 24px;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #e74c3c;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.hero .btn:hover {
+    background: #c0392b;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #333;
+}
+
+.car-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.car-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 300px;
+    text-align: center;
+}
+
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-card h3 {
+    margin: 15px 0 5px;
+}
+
+.car-card p {
+    margin-bottom: 15px;
+}
+
+.car-card:hover {
+    transform: scale(1.05);
+}
+
+#about, #contact {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    text-align: left;
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #c0392b;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
