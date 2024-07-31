@@ -7,11 +7,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-
-// You can add more JavaScript code here for additional interactivity
-
-// Example: Toggle dark/light mode
-const toggleButton = document.querySelector('.toggle-theme');
-toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-});
