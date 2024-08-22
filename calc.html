@@ -1,0 +1,92 @@
+<hmtl>
+    <head>
+        <h1>Calculator app</h1>
+        <meta charset="UTF-8"> <!-- Specifies the character encoding -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport settings -->
+        <meta name="description" content="A personal data form for collecting user information."> <!-- Page description -->
+        <meta name="keywords" content="personal, data, form, user information"> <!-- Keywords for search engines (optional) -->
+        <meta name="author" content="Bhavya Mistry"> <!-- Author of the document -->
+        <link rel="stylesheet" href="calc.css" 
+    </head>
+    <body>
+        <form>
+            <label for="num1">A:</label>
+            <input type="text" id="num1" placeholder="Number 1" required><br>
+            <label for="num2">B:</label> 
+            <input type="text" id="num2" placeholder="Number 2" required><br>
+            
+            <select>
+                <option value="Sum">Addition</option>
+                <option value="Subs">Substraction</option>
+                <option value="Mul">Multiplication</option>
+                <option value="div">Division</option>
+            </select>
+
+            <div class="but">
+                <input type="submit" value="Calculate" >
+                <input type="reset" value="Clear" >
+            <!-- </div>
+            <div class="rbut">    
+                <input type="reset" value="Reset" >
+            </div> -->
+
+
+        </form>
+        <script>
+                        // Get the input fields and select element
+            const num1Input = document.getElementById("num1");
+            const num2Input = document.getElementById("num2");
+            const operatorSelect = document.querySelector("select");
+            const calculateButton = document.querySelector("input[type='submit']");
+            const clearButton = document.querySelector("input[type='reset']");
+                    
+            // Add event listener to the calculate button
+            calculateButton.addEventListener("click", calculate);
+                    
+            // Add event listener to the clear button
+            clearButton.addEventListener("click", clear);
+                    
+            // Function to calculate the result
+            function calculate(event) {
+              event.preventDefault(); // Prevent the form from submitting
+            
+              const num1 = parseFloat(num1Input.value);
+              const num2 = parseFloat(num2Input.value);
+              const operator = operatorSelect.value;
+            
+              let result;
+            
+              switch (operator) {
+                case "Sum":
+                  result = num1 + num2;
+                  break;
+                case "Subs":
+                  result = num1 - num2;
+                  break;
+                case "Mul":
+                  result = num1 * num2;
+                  break;
+                case "div":
+                  if (num2 === 0) {
+                    alert("Cannot divide by zero!");
+                    return;
+                  }
+                  result = num1 / num2;
+                  break;
+                default:
+                  alert("Invalid operator!");
+                  return;
+              }
+          
+              alert(`The result is: ${result}`);
+            }
+            
+            // Function to clear the input fields
+            function clear() {
+              num1Input.value = "";
+              num2Input.value = "";
+              operatorSelect.selectedIndex = 0;
+            }
+        </script>
+    </body>
+</hmtl>
