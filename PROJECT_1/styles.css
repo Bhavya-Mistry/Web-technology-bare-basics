@@ -229,16 +229,25 @@ form input, form textarea {
     color: #fff;
 }
 form input:hover {
-    background: #747474;
+    /* background: #747474; */
     color: #fff;
     transition: ease 0.3s;
-    box-shadow: 0 0px 30px #ffffff3f;
+    box-shadow: 0 0px 60px #ffffff34;
 }
 form textarea:hover {
-    background: #747474;
+    /* background: #747474; */
     color: #fff;
     transition: ease 0.3s
-    box-shadow: 0 0px 30px #ffffff3f;
+}
+form textarea:focus {
+    background: #747474;
+    color: #fff;
+    transition: ease 1s
+}
+form input:focus {
+    background: #747474;
+    color: #fff;
+    transition: ease 1s
 }
 form button {
     background-color: #f39c12;
