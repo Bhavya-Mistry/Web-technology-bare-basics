@@ -13,18 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-
-    // Mobile Menu Toggle (if you add a mobile menu in the future)
-    const mobileMenuButton = document.querySelector('.mobile-menu-button');
-    const navMenu = document.querySelector('nav ul');
-
-    if (mobileMenuButton) {
-        mobileMenuButton.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-    }
-
-    // Form Validation (Basic)
+s
     const form = document.querySelector('form');
     
     if (form) {
