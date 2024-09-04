@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-s
+
     const form = document.querySelector('form');
     
     if (form) {
