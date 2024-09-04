@@ -228,7 +228,18 @@ form input, form textarea {
     background: #333;
     color: #fff;
 }
-
+form input:hover {
+    background: #747474;
+    color: #fff;
+    transition: ease 0.3s;
+    box-shadow: 0 0px 30px #ffffff3f;
+}
+form textarea:hover {
+    background: #747474;
+    color: #fff;
+    transition: ease 0.3s
+    box-shadow: 0 0px 30px #ffffff3f;
+}
 form button {
     background-color: #f39c12;
     color: #000;
