@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Smooth Scrolling for Navigation Links
     const navLinks = document.querySelectorAll('nav a');
-
+ 
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-
+  
     const form = document.querySelector('form');
     
     if (form) {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
-
+ 
             if (!name || !email || !message) {
                 e.preventDefault();
                 alert('Please fill out all fields.');
@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Optionally add more validation rules here
             // e.g., regex for email validation
-
+ 
             alert('Thank You!');
         });
     }
-});
+ });

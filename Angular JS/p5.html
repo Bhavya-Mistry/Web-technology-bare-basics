@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <body>
+        <div ng-app="" ng-init="groups=[{name:'Jani',country:'Norway',gender:'M'}, {name:'Hege',country:'Sweden',gender:'F'}, {name:'Kai',country:'Denmark',gender:'M'}]">
+            <p>Looping with objects:</p>
+            <ul>
+                <li ng-repeat="x in groups">
+                {{ x.name + ' and the country is ' + x.country }}</li>
+            </ul>
+        </div>
+    </body>
+</html>
