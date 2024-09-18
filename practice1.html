@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Over Background Color Change</title>
+  <style>
+    /* Styling for the div */
+    #colorBox {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;  /* Default background color */
+      border: 2px solid black;
+      text-align: center;
+      line-height: 200px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- A div element with text -->
+  <div id="colorBox">Hover ........over me!</div>
+
+  <script>
+    // Get the div element by its ID
+    let colorBox = document.getElementById('colorBox');
+
+    // Function to change background color on mouse over
+    colorBox.onmouseover = function() {
+      colorBox.style.backgroundColor = 'lightgreen';  // Change to light green when hovered
+    }
+
+    // Function to reset background color when the mouse leaves the div
+    colorBox.onmouseout = function() {
+      colorBox.style.backgroundColor = '';  // Revert to original color when not hovered
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Minimal Bootstrap Example</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* General Body Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      margin-top: 56px; /* Adjust for fixed navbar */
+    }
+
+    /* Navigation Bar */
+    .navbar-custom {
+      background-color: #343434; /* Army Green */
+    }
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-nav .nav-link {
+      color: #f5f5f5;
+    }
+    .navbar-custom .nav-link:hover {
+      color: #d1e0d1;
+    }
+
+    /* Carousel */
+    .carousel-item img {
+      width: 100%;
+      height: 60vh;
+      object-fit: cover;
+    }
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .carousel-caption h5, .carousel-caption p {
+      color: #f5f5f5;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background-color: #f0f0f0;
+      padding: 60px 0;
+      text-align: center;
+      border-bottom: 2px solid #d0d0d0;
+    }
+    .hero-section h1 {
+      font-size: 2.5rem;
+      color: #343434;
+      margin-bottom: 20px;
+    }
+    .hero-section p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #666;
+    }
+    .hero-section .btn-primary {
+      background-color: #343434;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+    }
+    .hero-section .btn-primary:hover {
+      background-color: #3b4a1b;
+    }
+
+    /* Main Content Sections */
+    .section-content {
+      padding: 60px 0;
+    }
+    .section-content h2 {
+      font-size: 2rem;
+      color: #343434;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+    .card-img-top {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      color: #343434;
+      margin-bottom: 15px;
+    }
+    .card-text {
+      font-size: 1rem;
+      color: #777;
+    }
+    .btn-primary {
+      background-color: #343434;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+    }
+    .btn-primary:hover {
+      background-color: #3b4a1b;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #333;
+      color: #f5f5f5;
+      padding: 30px 0;
+      border-top: 2px solid #444;
+    }
+    .footer a {
+      color: #f5f5f5;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Modal */
+    .modal-content {
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .modal-header {
+      border-bottom: none;
+    }
+    .modal-footer {
+      border-top: none;
+    }
+    .modal-title {
+      font-size: 1.5rem;
+      color: #343434;
+    }
+    .btn-primary {
+      background-color: #343434;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #3b4a1b;
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixed Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <a class="navbar-brand" href="#">MySite</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://via.placeholder.com/1600x600" class="d-block w-100" alt="Slide 1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First Slide</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/1600x600" class="d-block w-100" alt="Slide 2">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second Slide</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/1600x600" class="d-block w-100" alt="Slide 3">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third Slide</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-center">
+    <div class="container">
+      <h1 class="display-4">Welcome to MySite</h1>
+      <p class="lead">Explore our services and get in touch with us!</p>
+      <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Main Content Sections -->
+  <div class="container">
+    <div class="section-content">
+      <h2 class="text-center mb-4">Our Services</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Service 1">
+            <div class="card-body">
+              <h5 class="card-title">Service 1</h5>
+              <p class="card-text">Description of Service 1.</p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Service 2">
+            <div class="card-body">
+              <h5 class="card-title">Service 2</h5>
+              <p class="card-text">Description of Service 2.</p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Service 3">
+            <div class="card-body">
+              <h5 class="card-title">Service 3</h5>
+              <p class="card-text">Description of Service 3.</p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p>&copy; 2024 MySite. All rights reserved.</p>
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Service</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
