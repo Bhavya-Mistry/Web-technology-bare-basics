@@ -1,21 +1,21 @@
 <?php
+// Include the database connection file
+include 'db_connect.php';  // Ensure 'db_connect.php' is correctly referenced
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect form data
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
+    $name = htmlspecialchars($_POST['Name']);  // Ensure this matches the form field
+    $email = htmlspecialchars($_POST['Email']); // Ensure this matches the form field
+    $message = htmlspecialchars($_POST['Message']); // Ensure this matches the form field
 
-    // Email details
-    $to = "your-email@example.com";  // Replace with your email address
-    $subject = "New Contact Form Submission";
-    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
-    $headers = "From: $email";
+    // Insert data into the database
+    $sql = "INSERT INTO contact_form (name, email, message) VALUES ('$name', '$email', '$message')";
 
-    // Instead of sending an email, log the data for debugging
-file_put_contents('contact_form_log.txt', $body, FILE_APPEND);
-echo "<h2>Thank you, $name. Your message has been recorded!</h2>";
-
+    
 } else {
     echo "<h2>Invalid request</h2>";
 }
+
+// Close the database connection
+$conn->close();
 ?>
