@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolls Royce India</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Rolls Royce</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#models">Models</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Discover the Future of Driving</h1>
+            <p>Explore our latest car models and innovations.</p>
+            <!-- <a href="#models" class="btn">Explore Models</a> -->
+        </div>
+    </section>
+
+    <section id="models">
+        <h2>Our Models</h2>
+        <div class="car-grid">
+            <div class="car-card">
+                <img src="images/rr-ghost2.png" alt="Car 1">
+                <div class="car-info">
+                    <h3>Rolls Royce Ghost</h3>
+                    <p>0-100 kmph in 4.8s</p>
+                    <p>Price: ₹6.95 cr ownwards</p>
+                </div>
+            </div>
+            <div class="car-card">
+                <img src="images/rr-cullinan.png" alt="Car 2">
+                <div class="car-info">
+                    <h3>Rolls Royce Cullinan</h3>
+                    <p>0-100 kmph in 5.2s</p>
+                    <p>Price: ₹6.9 cr ownwards</p>
+                </div>
+            </div>
+            <div class="car-card">
+                <img src="images/latest.jpg" alt="Car 3">
+                <div class="car-info">
+                    <h3>Rolls Royce Phantom
+                    </h3>
+                    <p>0-100 kmph in 5.4s</p>
+                    <p>Price: ₹8.99 cr ownwards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <i class="fas fa-tachometer-alt"></i>
+                <h3>Performance</h3>
+                <p>Experience unparalleled luxury and performance with Rolls-Royce. Each vehicle is meticulously crafted for a smooth, powerful ride. Rolls-Royce's renowned V12 engines deliver effortless acceleration, while the advanced air suspension ensures a cloud-like experience on any road. Whether you're navigating city streets or cruising on the open highway, Rolls-Royce combines sophisticated engineering with unparalleled comfort, making every journey a serene and powerful experience.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-cogs"></i>
+                <h3>Technology</h3>
+                <p>Rolls-Royce integrates cutting-edge technology with timeless elegance. The Spirit of Ecstasy Rotary Controller offers intuitive access to the bespoke infotainment system, ensuring seamless connectivity and entertainment. Advanced driver-assistance features like night vision, adaptive cruise control, and a 360-degree camera system provide enhanced safety and convenience. Rolls-Royce's commitment to innovation extends to their electrified future, blending traditional craftsmanship with the latest in sustainable technology.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Safety</h3>
+                <p>Safety in a Rolls-Royce is uncompromised, with state-of-the-art systems designed to protect you in every scenario. The robust structure is complemented by advanced safety features such as collision warning, lane departure warning, and pedestrian detection. The vehicle's Stability Control system ensures smooth handling in all conditions, while the airbag system and reinforced cabin provide exceptional protection. Rolls-Royce’s commitment to safety is as strong as its dedication to luxury and performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="contact.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="Name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="Email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="Message" required></textarea>
+    
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Rolls Royce India. All rights reserved.</p>
+        <p>Follow us on:
+            <a href="https://www.facebook.com/rollsroycemotorcars/">Facebook</a> |
+            <a href="https://x.com/RollsRoyce?t=9rnMTGix3ILdMXDMCRQ5SA&s=09">X (Formly Twitter)</a> |
+            <a href="https://www.instagram.com/rollsroycecars?igsh=cWZubjJtYWQzYzc4">Instagram</a>
+        </p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="SCRIPTS.js"></script>
+</body>
+</html>
