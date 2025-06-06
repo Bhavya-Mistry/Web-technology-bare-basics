@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bhavya Mistry | ML & Data Science</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Bhavya Mistry</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ml-projects.html">ML Projects</a></li>
+                <li><a href="streamlit-apps.html">Streamlit Apps</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
+                </li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <h1>Interactive Streamlit Applications</h1>
+            <p>Experience my machine learning models firsthand through engaging and user-friendly web applications built with Streamlit.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="streamlit-apps" class="projects-section section-spacing">
+            <h2>Live Demos & Interactive Tools</h2>
+            <p class="section-description">
+                Streamlit empowers me to transform complex data analyses and machine learning models into intuitive, shareable web applications. Explore these live demos to interact with my work.
+            </p>
+            <div class="projects-grid">
+                <article class="project-card streamlit-card card-hover-effect"
+                    data-title="Flight Price Prediction App"
+                    data-long-description="This Streamlit application allows users to interactively predict flight prices by inputting various parameters such as departure/arrival cities, flight date, and airline. The app leverages a pre-trained machine learning model and provides instant price estimates, demonstrating the practical deployment of a predictive model in an accessible web interface. It showcases interactive data visualizations related to flight price trends."
+                    data-technologies="Python, Streamlit, Scikit-learn, Pandas, Plotly, Matplotlib"
+                    data-challenges="Designing an intuitive user interface, ensuring fast model inference for real-time predictions, managing session state for complex inputs, and deploying the application reliably."
+                    data-outcomes="Successfully deployed an interactive, user-friendly application that brings the flight price prediction model to life. Enhanced understanding of Streamlit's capabilities for rapid prototyping and deployment of data science solutions."
+                    data-github-link="https://github.com/Bhavya-Mistry/Streamlit-Apps/tree/main/Flight-price-prediction"
+                    data-live-app-link="YOUR_DEPLOYED_FLIGHT_APP_LINK">
+                    <h3>Flight Price Prediction App</h3>
+                    <div class="project-thumbnail-wrapper">
+                        <img src="assets/flight_prediction_ss.png" alt="Screenshot of Flight Price Prediction Streamlit App" class="project-screenshot">
+                    </div>
+                    <p>An interactive application that predicts flight prices based on user inputs like departure city, destination, date, and airline. See how various factors influence airfare in real-time.</p>
+                    <div class="project-links">
+                        <a href="#" class="button button-primary open-modal-btn"><i class="fas fa-info-circle"></i> Learn More</a>
+                        <a href="YOUR_DEPLOYED_FLIGHT_APP_LINK" target="_blank" rel="noopener" class="button button-icon"><i class="fas fa-external-link-alt"></i> Try Live</a>
+                        <a href="https://github.com/Bhavya-Mistry/Streamlit-Apps/tree/main/Flight-price-prediction" target="_blank" rel="noopener" class="button button-secondary-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card streamlit-card card-hover-effect"
+                    data-title="Customer Segmentation App"
+                    data-long-description="This Streamlit application provides a visual and interactive way to perform customer segmentation. Users can upload their own dataset (e.g., CSV file) and choose from various clustering algorithms (K-Means, DBSCAN). The app then visualizes the clusters, displays key characteristics of each segment, and allows for dynamic parameter tuning. This tool empowers businesses to gain insights into their customer base for targeted marketing strategies."
+                    data-technologies="Python, Streamlit, Scikit-learn (clustering), Pandas, Plotly, Seaborn"
+                    data-challenges="Handling diverse user-uploaded data formats, ensuring robust error handling, providing clear visualizations for complex clustering results, and optimizing performance for larger datasets."
+                    data-outcomes="Created a versatile and user-friendly tool that democratizes customer segmentation. The app provides actionable insights, making complex clustering results accessible to non-technical users and facilitating data-driven decision-making."
+                    data-github-link="https://github.com/Bhavya-Mistry/Streamlit-Apps/tree/main/customer-segmentation"
+                    data-live-app-link="YOUR_DEPLOYED_CUSTOMER_SEG_APP_LINK">
+                    <h3>Customer Segmentation App</h3>
+                    <div class="project-thumbnail-wrapper">
+                        <img src="assets/customer_segmentation_ss.png" alt="Screenshot of Customer Segmentation Streamlit App" class="project-screenshot">
+                    </div>
+                    <p>Upload your customer data to this app, and it will perform dynamic customer segmentation using advanced clustering algorithms, visualizing distinct customer groups for targeted marketing insights.</p>
+                    <div class="project-links">
+                        <a href="#" class="button button-primary open-modal-btn"><i class="fas fa-info-circle"></i> Learn More</a>
+                        <a href="YOUR_DEPLOYED_CUSTOMER_SEG_APP_LINK" target="_blank" rel="noopener" class="button button-icon"><i class="fas fa-external-link-alt"></i> Try Live</a>
+                        <a href="https://github.com/Bhavya-Mistry/Streamlit-Apps/tree/main/customer-segmentation" target="_blank" rel="noopener" class="button button-secondary-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </article>
+
+                 <article class="project-card streamlit-card card-hover-effect"
+                    data-title="Basic Text Summarization App"
+                    data-long-description="This interactive Streamlit application allows users to paste or type any text and instantly receive a concise summary. It leverages a pre-trained NLP model for extractive summarization, identifying and extracting the most important sentences. The app is designed for quick content digestion and demonstrating the power of NLP in a simple, accessible interface. It showcases how a complex NLP task can be made user-friendly."
+                    data-technologies="Python, Streamlit, NLTK, Spacy, gensim"
+                    data-challenges="Handling varying text input lengths and complexities, ensuring the extracted summary is coherent and relevant, and providing a responsive user experience for text processing."
+                    data-outcomes="Successfully built and deployed a functional text summarization tool, providing a practical demonstration of NLP capabilities. The app is a testament to Streamlit's ability to quickly bring machine learning models to a web environment for public use."
+                    data-github-link="https://github.com/Bhavya-Mistry/Streamlit-Apps/tree/main/Basic-text-summarization"
+                    data-live-app-link="YOUR_DEPLOYED_TEXT_SUM_APP_LINK">
+                    <h3>Basic Text Summarization App</h3>
+                    <div class="project-thumbnail-wrapper">
+                        <img src="assets/text_summarization_ss.png" alt="Screenshot of Text Summarization Streamlit App" class="project-screenshot">
+                    </div>
+                    <p>Paste any text into this intuitive app to get an instant, concise summary generated using state-of-the-art NLP models. Perfect for quickly grasping the essence of long documents.</p>
+                    <div class="project-links">
+                        <a href="#" class="button button-primary open-modal-btn"><i class="fas fa-info-circle"></i> Learn More</a>
+                        <a href="YOUR_DEPLOYED_TEXT_SUM_APP_LINK" target="_blank" rel="noopener" class="button button-icon"><i class="fas fa-external-link-alt"></i> Try Live</a>
+                        <a href="https://github.com/Bhavya-Mistry/Streamlit-Apps/tree/main/Basic-text-summarization" target="_blank" rel="noopener" class="button button-secondary-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </article>
+
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Bhavya Mistry. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modalProjectTitle"></h3>
+            <div class="modal-body">
+                <p id="modalLongDescription"></p>
+                <div class="modal-section">
+                    <h4><i class="fas fa-tools"></i> Technologies Used</h4>
+                    <p id="modalTechnologies"></p>
+                </div>
+                <div class="modal-section">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Challenges Faced</h4>
+                    <p id="modalChallenges"></p>
+                </div>
+                <div class="modal-section">
+                    <h4><i class="fas fa-lightbulb"></i> Solutions & Outcomes</h4>
+                    <p id="modalOutcomes"></p>
+                </div>
+                <div class="modal-links">
+                    <a id="modalGithubLink" href="#" target="_blank" rel="noopener" class="button button-secondary-outline"><i class="fab fa-github"></i> View Code on GitHub</a>
+                    <a id="modalLiveAppLink" href="#" target="_blank" rel="noopener" class="button button-primary"><i class="fas fa-external-link-alt"></i> Try Live App</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bhavya Mistry | ML & Data Science</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Bhavya Mistry</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ml-projects.html">ML Projects</a></li>
+                <li><a href="streamlit-apps.html">Streamlit Apps</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
+                </li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <h1>My Machine Learning Portfolio</h1>
+            <p>Dive into a curated selection of my machine learning projects, demonstrating practical applications of predictive modeling, NLP, computer vision, and more.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="projects" class="projects-section section-spacing">
+            <h2>Practical Applications & Innovations</h2>
+            <div class="projects-grid">
+                <article class="project-card card-hover-effect"
+                    data-title="Basic Text Summarization"
+                    data-long-description="This project focuses on building a robust text summarization tool using both extractive and abstractive methods. I explored techniques like TF-IDF, TextRank, and experimented with pre-trained transformer models to generate concise, informative summaries from large documents. The primary goal was to distil key information efficiently. The model aims for accuracy and coherence, making it suitable for quick content digestion."
+                    data-technologies="Python, NLTK, SpaCy, Scikit-learn, Hugging Face Transformers (basic), Pandas"
+                    data-challenges="Handling varying text lengths, maintaining coherence in summaries, evaluating summarization quality (ROUGE scores), balancing model complexity with performance."
+                    data-outcomes="Successfully implemented a flexible summarizer capable of handling diverse text types. Gained deep insights into NLP pipeline design and evaluation metrics for generative tasks."
+                    data-github-link="https://github.com/Bhavya-Mistry/ML/tree/main/Basic-text-summarization">
+                    <h3>Basic Text Summarization</h3>
+                    <p>Utilized advanced NLP techniques to condense large texts into concise, informative summaries, highlighting key insights and reducing reading time.</p>
+                    <div class="project-links">
+                        <a href="#" class="button button-primary open-modal-btn"><i class="fas fa-info-circle"></i> Learn More</a>
+                        <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Basic-text-summarization" target="_blank" rel="noopener" class="button button-secondary-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card card-hover-effect"
+                    data-title="Flight Price Prediction"
+                    data-long-description="This project involved developing a sophisticated regression model to accurately forecast flight prices. The model incorporates various features such as departure and arrival airports, flight duration, airline, date, and time of booking. Feature engineering played a crucial role in extracting meaningful insights from date-time data. Different regression algorithms were benchmarked to identify the optimal predictive solution."
+                    data-technologies="Python, Pandas, NumPy, Scikit-learn (RandomForestRegressor, GradientBoostingRegressor), Matplotlib, Seaborn"
+                    data-challenges="Handling categorical features with many unique values, dealing with imbalanced data distributions for certain routes, preventing overfitting, and selecting optimal features."
+                    data-outcomes="Achieved a competitive Mean Absolute Error (MAE) for price prediction, demonstrating the ability to build and fine-tune predictive models on real-world datasets. The project highlighted the importance of robust feature engineering for time-series data."
+                    data-github-link="https://github.com/Bhavya-Mistry/ML/tree/main/Flight-price-prediction">
+                    <h3>Flight Price Prediction</h3>
+                    <p>Developed a robust regression model to accurately forecast flight prices based on historical data, including crucial features like departure date, airline, and destination.</p>
+                    <div class="project-links">
+                        <a href="#" class="button button-primary open-modal-btn"><i class="fas fa-info-circle"></i> Learn More</a>
+                        <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Flight-price-prediction" target="_blank" rel="noopener" class="button button-secondary-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card card-hover-effect"
+                    data-title="Iris Classification"
+                    data-long-description="A foundational machine learning project demonstrating various classification algorithms on the classic Iris dataset. This project served as a comprehensive exploration of supervised learning, covering data loading, exploratory data analysis, model training (using algorithms like K-Nearest Neighbors, Support Vector Machines, Decision Trees, and Logistic Regression), and robust evaluation metrics (accuracy, precision, recall, F1-score)."
+                    data-technologies="Python, Scikit-learn, Pandas, Matplotlib, Seaborn"
+                    data-challenges="Understanding feature importance, visualizing decision boundaries, and selecting the most appropriate evaluation metrics for a multi-class classification problem."
+                    data-outcomes="Successfully implemented multiple classification models, demonstrating proficiency in standard ML workflows. Gained hands-on experience in comparing model performance and understanding the trade-offs between different algorithms for a simple, yet illustrative, dataset."
+                    data-github-link="https://github.com/Bhavya-Mistry/ML/tree/main/Iris-classification">
+                    <h3>Iris Classification</h3>
+                    <p>A fundamental yet insightful project demonstrating various classification algorithms to precisely identify iris species from distinct flower measurements.</p>
+                    <div class="project-links">
+                        <a href="#" class="button button-primary open-modal-btn"><i class="fas fa-info-circle"></i> Learn More</a>
+                        <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Iris-classification" target="_blank" rel="noopener" class="button button-secondary-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card card-hover-effect"
+                    data-title="Single Image Dehazing"
+                    data-long-description="This project focuses on applying advanced image processing and computer vision techniques to remove atmospheric haze from single images. It involved understanding and implementing algorithms like Dark Channel Prior (DCP) for estimating atmospheric light and transmission map, crucial steps for effective dehazing. The goal was to significantly improve image clarity and visibility in hazy conditions."
+                    data-technologies="Python, OpenCV, NumPy"
+                    data-challenges="Accurately estimating the atmospheric light from hazy images, handling varying haze densities, and ensuring the dehazed images retain natural colors and details without introducing artifacts."
+                    data-outcomes="Successfully implemented an effective single-image dehazing solution, demonstrating strong command over image processing fundamentals. The project provided practical experience in applying computer vision algorithms to real-world image enhancement problems."
+                    data-github-link="https://github.com/Bhavya-Mistry/ML/tree/main/Single-Image-Dehazing">
+                    <h3>Single Image Dehazing</h3>
+                    <p>Applied sophisticated image processing and computer vision techniques to effectively remove atmospheric haze from individual images, significantly enhancing visual clarity.</p>
+                    <div class="project-links">
+                        <a href="#" class="button button-primary open-modal-btn"><i class="fas fa-info-circle"></i> Learn More</a>
+                        <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Single-Image-Dehazing" target="_blank" rel="noopener" class="button button-secondary-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card card-hover-effect"
+                    data-title="SmartHealth Predictive Analyzer"
+                    data-long-description="Developed a comprehensive predictive analyzer for health data, designed to identify potential health issues early. This involved cleaning and preprocessing complex healthcare datasets, feature engineering from patient records (e.g., vital signs, lab results, demographic info), and building classification models to predict risk factors for various conditions. The aim was to provide proactive insights for personalized healthcare."
+                    data-technologies="Python, Pandas, Scikit-learn (various classifiers), Matplotlib, Seaborn, potentially some basic SQL for data extraction"
+                    data-challenges="Handling missing data in clinical records, dealing with highly imbalanced classes (e.g., rare diseases), ensuring model interpretability for medical applications, and data privacy considerations."
+                    data-outcomes="Successfully built and validated a predictive model capable of flagging individuals at higher risk, demonstrating the ability to apply machine learning to sensitive and complex domains like healthcare. Gained experience in ethical considerations and data governance."
+                    data-github-link="https://github.com/Bhavya-Mistry/ML/tree/main/SmartHealth-Predictive-Analyzer">
+                    <h3>SmartHealth Predictive Analyzer</h3>
+                    <p>Designed and built intuitive ML models to analyze complex health datasets and predict potential health issues, providing proactive insights for well-being management.</p>
+                    <div class="project-links">
+                        <a href="#" class="button button-primary open-modal-btn"><i class="fas fa-info-circle"></i> Learn More</a>
+                        <a href="https://github.com/Bhavya-Mistry/ML/tree/main/SmartHealth-Predictive-Analyzer" target="_blank" rel="noopener" class="button button-secondary-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card card-hover-effect"
+                    data-title="Titanic Survival Prediction"
+                    data-long-description="A classic data science challenge to predict the survival of passengers on the Titanic. This project involved extensive data cleaning, handling missing values, feature engineering (e.g., creating family size, title from name), and applying various classification algorithms (Logistic Regression, Decision Trees, Random Forests, Gradient Boosting) to the dataset. Model performance was meticulously evaluated using cross-validation and standard metrics."
+                    data-technologies="Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn"
+                    data-challenges="Imputing missing data effectively (especially for 'Age' and 'Cabin'), feature engineering impactful new variables from existing ones, and understanding the bias-variance trade-off in model selection."
+                    data-outcomes="Achieved high predictive accuracy, demonstrating strong foundational skills in data preprocessing, exploratory data analysis, and supervised machine learning. The project provided valuable experience in interpreting feature importance for better understanding of the factors influencing survival."
+                    data-github-link="https://github.com/Bhavya-Mistry/ML/tree/main/Titanic-survival">
+                    <h3>Titanic Survival Prediction</h3>
+                    <p>A classic data science challenge tackled with various classification algorithms, predicting Titanic passenger survival rates and highlighting key influencing factors from historical data.</p>
+                    <div class="project-links">
+                        <a href="#" class="button button-primary open-modal-btn"><i class="fas fa-info-circle"></i> Learn More</a>
+                        <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Titanic-survival" target="_blank" rel="noopener" class="button button-secondary-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card card-hover-effect"
+                    data-title="Customer Segmentation"
+                    data-long-description="This project involved applying unsupervised machine learning techniques, specifically clustering algorithms (K-Means, DBSCAN, Hierarchical Clustering), to segment a customer base into distinct groups. The goal was to identify different customer archetypes based on their purchasing behavior, demographics, and engagement patterns. The insights gained from segmentation can drive targeted marketing strategies and personalized customer experiences."
+                    data-technologies="Python, Pandas, Scikit-learn (clustering), Matplotlib, Seaborn, Factor Analysis"
+                    data-challenges="Determining the optimal number of clusters, interpreting the characteristics of each segment, dealing with high-dimensional data, and visualizing complex cluster relationships effectively."
+                    data-outcomes="Successfully identified meaningful customer segments, providing actionable insights for business strategy. The project reinforced understanding of unsupervised learning techniques and the importance of domain knowledge in interpreting clustering results for business value."
+                    data-github-link="https://github.com/Bhavya-Mistry/ML/tree/main/customer-segmentation">
+                    <h3>Customer Segmentation</h3>
+                    <p>Utilized advanced clustering techniques to segment diverse customer bases into distinct groups, enabling highly targeted marketing strategies and personalized customer experiences.</p>
+                    <div class="project-links">
+                        <a href="#" class="button button-primary open-modal-btn"><i class="fas fa-info-circle"></i> Learn More</a>
+                        <a href="https://github.com/Bhavya-Mistry/ML/tree/main/customer-segmentation" target="_blank" rel="noopener" class="button button-secondary-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card card-hover-effect"
+                    data-title="Mini Projects (Collection)"
+                    data-long-description="This repository contains a collection of smaller, focused machine learning projects designed to demonstrate proficiency in fundamental algorithms and various problem-solving techniques. Each mini-project tackles a specific concept or dataset, ranging from basic regression and classification to simple data manipulation and visualization exercises. It serves as a playground for quick implementations and exploring new ideas."
+                    data-technologies="Python, Pandas, NumPy, Scikit-learn, Matplotlib (and various specific libraries depending on the mini-project)"
+                    data-challenges="Efficiently structuring code for multiple small projects, ensuring clarity and reproducibility for each individual component, and maintaining a consistent development environment."
+                    data-outcomes="Showcased versatility across different ML concepts and built a strong foundation in core machine learning practices. The collection serves as a quick reference for fundamental implementations and problem-solving patterns in data science."
+                    data-github-link="https://github.com/Bhavya-Mistry/ML/tree/main/Mini-Projects">
+                    <h3>Mini Projects (Collection)</h3>
+                    <p>A versatile collection of smaller machine learning projects, demonstrating proficiency across various fundamental algorithms and techniques for diverse applications.</p>
+                    <div class="project-links">
+                        <a href="#" class="button button-primary open-modal-btn"><i class="fas fa-info-circle"></i> Learn More</a>
+                        <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Mini-Projects" target="_blank" rel="noopener" class="button button-secondary-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Bhavya Mistry. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modalProjectTitle"></h3>
+            <div class="modal-body">
+                <p id="modalLongDescription"></p>
+                <div class="modal-section">
+                    <h4><i class="fas fa-tools"></i> Technologies Used</h4>
+                    <p id="modalTechnologies"></p>
+                </div>
+                <div class="modal-section">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Challenges Faced</h4>
+                    <p id="modalChallenges"></p>
+                </div>
+                <div class="modal-section">
+                    <h4><i class="fas fa-lightbulb"></i> Solutions & Outcomes</h4>
+                    <p id="modalOutcomes"></p>
+                </div>
+                <div class="modal-links">
+                    <a id="modalGithubLink" href="#" target="_blank" rel="noopener" class="button button-secondary-outline"><i class="fab fa-github"></i> View Code on GitHub</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
