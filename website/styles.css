@@ -10,17 +10,64 @@
     padding: 0;
 }
 
+:root {
+    /* Chronark-inspired Colors */
+    --hero-gradient-start: #645cff; /* Purple-blue */
+    --hero-gradient-end: #5b29ff; /* Darker purple */
+    --bg-color: #ffffff; /* Light mode background */
+    --text-color: #333; /* Light mode text */
+    --link-color: var(--hero-gradient-end);
+    --link-hover: #4e1cdb;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+
+    /* General Button Colors (matching hero gradient) */
+    --button-bg: var(--hero-gradient-end);
+    --button-hover-bg: #4e1cdb;
+    --button-text: #fff;
+    --button-outline-border: var(--hero-gradient-end);
+    --button-outline-text: var(--hero-gradient-end);
+    --button-outline-hover-bg: rgba(91, 41, 255, 0.05); /* Light hover effect */
+
+    /* Navbar Colors (will adapt to bg-color) */
+    --nav-bg: var(--bg-color);
+    --nav-text: var(--text-color);
+    --nav-toggle-color: var(--text-color);
+
+    /* Footer Colors (will adapt to bg-color) */
+    --footer-bg: var(--bg-color);
+    --footer-text: var(--text-color);
+}
+
 body {
-    font-family: 'Inter', sans-serif; /* Use Inter for all body text */
-    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
     color: var(--text-color);
-    line-height: 1.7; /* Increased line height for readability */
+    background: var(--bg-color);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll from reveal animations */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    transition: background-color 0.4s ease, color 0.4s ease; /* Smoother dark mode transition */
-    -webkit-font-smoothing: antialiased; /* Better font rendering */
+    transition: background-color 0.4s ease, color 0.4s ease;
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark-mode {
+    --bg-color: #181818;
+    --text-color: #EEE;
+    --link-color: #8A81FF; /* Lighter purple-blue for dark mode links */
+    --link-hover: #9E95FF;
+    --card-bg: #222222;
+    --border-color: #333;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+
+    --button-bg: #8A81FF;
+    --button-hover-bg: #9E95FF;
+    --button-outline-border: #8A81FF;
+    --button-outline-text: #8A81FF;
+    --button-outline-hover-bg: rgba(138, 129, 255, 0.1);
 }
 
 html {
@@ -43,90 +90,55 @@ img {
     display: block;
 }
 
-/* --- Color Variables (Light & Dark Mode) --- */
-:root {
-    /* Light Mode Colors */
-    --primary-color: #0056b3; /* A vibrant blue for accents and headings */
-    --secondary-color: #003366; /* Darker blue for deeper elements */
-    --text-color: #333; /* Standard body text */
-    --bg-color: #f8f9fa; /* Light background */
-    --card-bg: #ffffff; /* White cards */
-    --border-color: #e0e0e0; /* Light borders */
-    --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadows */
-    --link-color: #0056b3; /* Links in light mode */
-    --link-hover: #003f80; /* Link hover in light mode */
-    --button-bg: #007bff; /* Primary button background */
-    --button-hover-bg: #0056b3; /* Primary button hover background */
-    --button-text: #ffffff; /* Button text color */
-    --button-outline-border: #007bff; /* Outline button border */
-    --button-outline-text: #007bff; /* Outline button text */
-    --button-outline-hover-bg: #e9f5ff; /* Outline button hover background */
-    --nav-bg: #ffffff; /* Navbar background */
-    --nav-text: #333; /* Navbar text color */
-    --nav-toggle-color: #333; /* Navbar toggle color */
-    --footer-bg: #333; /* Footer background */
-    --footer-text: #f8f9fa; /* Footer text color */
-    --form-border: #ced4da; /* Form input border */
-    --form-focus-shadow: rgba(0, 123, 255, 0.25); /* Form focus shadow */
-    --gradient-start: #007bff; /* Gradient start color */
-    --gradient-end: #0056b3; /* Gradient end color */
+/* --- Utility Classes --- */
+.lock-scroll {
+    overflow: hidden;
 }
 
-body.dark-mode {
-    /* Dark Mode Colors */
-    --primary-color: #4CAF50; /* Green for headings in dark mode */
-    --secondary-color: #66BB6A; /* Lighter green for accents */
-    --text-color: #e0e0e0; /* Light text for dark background */
-    --bg-color: #1a1a2e; /* Dark background */
-    --card-bg: #2c2c4d; /* Darker cards */
-    --border-color: #444466; /* Dark borders */
-    --shadow-color: rgba(0, 0, 0, 0.3); /* More prominent shadows */
-    --link-color: #4CAF50; /* Links in dark mode */
-    --link-hover: #81C784; /* Link hover in dark mode */
-    --button-bg: #4CAF50; /* Primary button background */
-    --button-hover-bg: #66BB6A; /* Primary button hover background */
-    --button-text: #ffffff; /* Button text color */
-    --button-outline-border: #4CAF50; /* Outline button border */
-    --button-outline-text: #4CAF50; /* Outline button text */
-    --button-outline-hover-bg: rgba(76, 175, 80, 0.2); /* Outline button hover background */
-    --nav-bg: #2c2c4d; /* Navbar background */
-    --nav-text: #e0e0e0; /* Navbar text color */
-    --nav-toggle-color: #e0e0e0; /* Navbar toggle color */
-    --footer-bg: #111122; /* Footer background */
-    --footer-text: #e0e0e0; /* Footer text color */
-    --form-border: #444466; /* Form input border */
-    --form-focus-shadow: rgba(76, 175, 80, 0.25); /* Form focus shadow */
-    --gradient-start: #2c2c4d; /* Gradient start color */
-    --gradient-end: #1a1a2e; /* Gradient end color */
-}
-
-/* --- Container --- */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
     padding: 0 20px; /* Consistent horizontal padding */
 }
 
+.section-spacing {
+    padding: 6rem 0; /* Consistent vertical padding for sections */
+}
+
+
 /* --- Navbar --- */
 .navbar {
-    background-color: var(--nav-bg);
-    padding: 15px 0;
-    box-shadow: 0 2px 10px var(--shadow-color);
+    width: 100%;
+    background: var(--nav-bg);
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 2px 10px var(--shadow-color);
+    padding: 1rem 0;
+    /* Initial state for reveal animation */
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity .6s ease, transform .6s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .nav-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px; /* Use container padding */
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
-    font-family: 'Inter', sans-serif; /* Use Inter for logo */
-    font-weight: 800; /* Extra bold */
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
     font-size: 1.8rem;
     color: var(--nav-text);
     letter-spacing: 0.05em;
@@ -136,7 +148,7 @@ body.dark-mode {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px; /* Space between nav items */
+    gap: 30px;
     margin: 0;
     padding: 0;
 }
@@ -157,12 +169,12 @@ body.dark-mode {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--primary-color);
+    background-color: var(--link-color);
     transition: width 0.3s ease;
 }
 
 .nav-links li a:hover::after,
-.nav-links li a.active::after { /* Add active class for current page */
+.nav-links li a.active::after {
     width: 100%;
 }
 
@@ -174,8 +186,8 @@ body.dark-mode {
     cursor: pointer;
     color: var(--nav-text);
     transition: transform 0.3s ease;
-    padding: 0 5px; /* Add some padding */
-    display: flex; /* Ensure emoji is centered */
+    padding: 0 5px;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -186,14 +198,14 @@ body.dark-mode {
 
 /* Mobile Navigation Toggle */
 .nav-toggle {
-    display: none; /* Hidden by default for desktop */
+    display: none;
     background: none;
     border: none;
     font-size: 2rem;
     cursor: pointer;
     color: var(--nav-toggle-color);
-    z-index: 1001; /* Ensure it's above other content when open */
-    position: relative; /* For hamburger icon positioning */
+    z-index: 1001;
+    position: relative;
     width: 40px;
     height: 40px;
     display: flex;
@@ -228,9 +240,8 @@ body.dark-mode {
     top: 10px;
 }
 
-/* Toggle active state */
 .nav-toggle[aria-expanded="true"] .hamburger {
-    background-color: transparent; /* Hide middle bar */
+    background-color: transparent;
 }
 
 .nav-toggle[aria-expanded="true"] .hamburger::before {
@@ -242,93 +253,145 @@ body.dark-mode {
 }
 
 
-/* --- Hero Section (Chronark-like Intro) --- */
-.hero {
-    background-color: var(--nav-bg); /* Use nav-bg for a dark consistent background */
-    color: var(--text-color); /* Text color will be light due to dark background */
-    padding: 100px 0 80px; /* More vertical padding */
-    text-align: center;
-    overflow: hidden; /* Important for animation */
-    min-height: 80vh; /* Make it take up more screen space */
+/* --- Hero Section (New Style) --- */
+#hero {
+    position: relative;
+    min-height: 100vh;
     display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
-    position: relative; /* For absolute positioning of any subtle background elements */
-    transition: background-color 0.4s ease, color 0.4s ease;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--hero-gradient-start), var(--hero-gradient-end));
+    color: #fff;
+    overflow: hidden; /* Crucial for name animation */
+    text-align: center;
+    z-index: 1; /* Below curtains */
 }
 
 .hero-content {
-    max-width: 1000px; /* Allow wider text */
-    margin: 0 auto;
-    position: relative; /* Ensure it's above any background effects */
-    z-index: 2; /* To be above any background animation */
-}
-
-.hero-content h1 {
-    font-family: 'Inter', sans-serif;
-    font-size: 6rem; /* Make it HUGE - adjust as needed for screen size */
-    margin-bottom: 25px;
-    line-height: 1.1;
-    letter-spacing: -0.02em; /* Slightly tighter letter spacing for large text */
-    font-weight: 900; /* Super bold */
-    color: var(--primary-color); /* Or a bright white/light color, matching your dark mode primary */
     position: relative;
-    overflow: hidden; /* Hide text before animation */
-    display: inline-block; /* Essential for text reveal */
-    padding-bottom: 5px; /* Adjust padding if needed */
+    z-index: 1; /* Above any subtle background elements */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.hero-content h1 .animated-text {
-    display: block; /* Make the span take full width */
+#introName {
+    font-size: clamp(3rem, 10vw, 9rem); /* Responsive font size */
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    opacity: 0;
     transform: translateY(100%); /* Start off-screen below */
-    animation: revealText 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Text reveal animation */
-    animation-delay: 0.5s; /* Delay the animation slightly */
-    will-change: transform; /* Optimize for animation */
+    animation: nameSlide 1.15s cubic-bezier(.2,.8,.2,1) .8s forwards; /* Animation properties */
+    color: #fff; /* Ensure it's white against the gradient */
+    margin-bottom: 25px; /* Space between name and tagline */
+    line-height: 1.1;
 }
 
-.hero-content p {
-    font-size: 1.6rem; /* Make tagline larger */
+.tagline {
+    font-size: 1.6rem;
     line-height: 1.5;
     margin-bottom: 40px;
-    opacity: 0; /* Start hidden */
-    animation: fadeIn 1s ease-out forwards; /* Fade in animation */
-    animation-delay: 1.2s; /* Delay after h1 animation */
-    font-weight: 400; /* Keep it readable */
+    font-weight: 400;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .hero-buttons {
-    opacity: 0; /* Start hidden */
-    animation: fadeIn 1s ease-out forwards; /* Fade in animation */
-    animation-delay: 1.5s; /* Delay after p animation */
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space out buttons */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 
-/* Animations for the intro */
-@keyframes revealText {
-    0% {
-        transform: translateY(100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
+/* --- Curtains --- */
+.curtain {
+    position: fixed; /* Use fixed so it covers the entire viewport */
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--bg-color); /* Matches body background */
+    z-index: 2000; /* High z-index to cover everything */
+    transition: transform 1.4s ease-in-out;
+}
+.curtain.left {
+    left: 0;
+}
+.curtain.right {
+    right: 0;
+}
+.curtain.open.left {
+    transform: translateX(-101%); /* Move fully off-screen */
+}
+.curtain.open.right {
+    transform: translateX(101%); /* Move fully off-screen */
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
+
+/* --- Scroll Reveal Animation --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .6s ease-out, transform .6s ease-out;
+}
+
+/* Add different animation delays for sequential reveals if desired */
+.reveal:nth-child(1) { transition-delay: 0.1s; }
+.reveal:nth-child(2) { transition-delay: 0.2s; }
+.reveal:nth-child(3) { transition-delay: 0.3s; }
+/* ... and so on for other elements in a grid or sequence */
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* --- Animations --- */
+@keyframes nameSlide {
+    to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+/* --- Headings --- */
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 3.2rem;
+    margin-bottom: 30px;
+    color: var(--link-color); /* Use link-color for headings */
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 1.2;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--hero-gradient-end); /* Consistent underliner */
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.section-description {
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: -10px auto 50px auto;
+    color: var(--text-color);
+    opacity: 0.9;
+    font-weight: 300;
 }
 
 
@@ -345,7 +408,7 @@ body.dark-mode {
     transition: all 0.3s ease;
     text-align: center;
     white-space: nowrap;
-    gap: 8px; /* Space between icon and text */
+    gap: 8px;
 }
 
 .button-primary {
@@ -369,7 +432,7 @@ body.dark-mode {
 
 .button-secondary-outline:hover {
     background-color: var(--button-outline-hover-bg);
-    color: var(--button-outline-border); /* Keep text color for hover */
+    color: var(--button-outline-text);
     transform: translateY(-2px);
     box-shadow: 0 4px 10px var(--shadow-color);
 }
@@ -378,47 +441,6 @@ body.dark-mode {
     font-size: 1.2em;
 }
 
-
-/* --- Section Styling --- */
-.section-spacing {
-    padding: 80px 0; /* Consistent vertical padding for sections */
-}
-
-h2 {
-    font-family: 'Inter', sans-serif; /* Use Inter for main section headings */
-    font-size: 3.2rem;
-    margin-bottom: 30px;
-    color: var(--primary-color);
-    text-align: center;
-    font-weight: 800; /* Bold for prominence */
-    letter-spacing: 0.02em;
-    position: relative;
-    display: inline-block;
-    width: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: 1.2;
-}
-
-h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: var(--secondary-color);
-    margin: 15px auto 0;
-    border-radius: 2px;
-}
-
-.section-description {
-    text-align: center;
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: -10px auto 50px auto;
-    color: var(--text-color);
-    opacity: 0.9;
-    font-weight: 300;
-}
 
 /* --- About Section --- */
 .about-content {
@@ -437,14 +459,14 @@ h2::after {
 .about-image {
     max-width: 300px;
     border-radius: 50%;
-    border: 5px solid var(--primary-color);
+    border: 5px solid var(--link-color);
     box-shadow: 0 8px 20px var(--shadow-color);
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .about-image:hover {
     transform: scale(1.03);
-    border-color: var(--secondary-color);
+    border-color: var(--hero-gradient-end);
 }
 
 .about-text {
@@ -462,9 +484,10 @@ h2::after {
 }
 
 .about-text strong {
-    color: var(--primary-color);
+    color: var(--link-color);
     font-weight: 600;
 }
+
 
 /* --- Education Section --- */
 .education-grid {
@@ -494,18 +517,18 @@ h2::after {
 
 .education-item i {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--link-color);
     margin-bottom: 15px;
 }
 
 .education-item h3 {
-    font-family: 'Inter', sans-serif; /* Use Inter for education item headings */
+    font-family: 'Inter', sans-serif;
     margin-top: 0;
     margin-bottom: 10px;
-    color: var(--primary-color);
+    color: var(--link-color);
     font-size: 1.6rem;
     line-height: 1.3;
-    font-weight: 700; /* Bold */
+    font-weight: 700;
 }
 
 .education-item p {
@@ -517,8 +540,8 @@ h2::after {
 .education-item .duration {
     font-style: italic;
     font-size: 0.95rem;
-    color: var(--secondary-color);
-    margin-top: auto; /* Push to bottom */
+    color: var(--hero-gradient-end);
+    margin-top: auto;
 }
 
 
@@ -545,21 +568,21 @@ h2::after {
 }
 
 .skill-category h3 {
-    font-family: 'Inter', sans-serif; /* Use Inter for skill category headings */
+    font-family: 'Inter', sans-serif;
     margin-top: 0;
     margin-bottom: 20px;
-    color: var(--primary-color);
+    color: var(--link-color);
     font-size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    font-weight: 700; /* Bold */
+    font-weight: 700;
 }
 
 .skill-category h3 i {
     font-size: 1.6em;
-    color: var(--secondary-color);
+    color: var(--hero-gradient-end);
 }
 
 .skills-list {
@@ -587,18 +610,19 @@ h2::after {
 
 .skills-list li:hover {
     background-color: var(--button-outline-hover-bg);
-    border-color: var(--primary-color);
+    border-color: var(--link-color);
 }
 
 .skills-list li i {
-    color: var(--primary-color);
+    color: var(--link-color);
     font-size: 1.1em;
 }
 
-/* --- Projects Grid (ML & Streamlit) --- */
+
+/* --- Projects Grid & Cards --- */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 40px;
     margin-top: 40px;
 }
@@ -611,7 +635,7 @@ h2::after {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Push links to bottom */
+    justify-content: space-between;
     border: 1px solid var(--border-color);
 }
 
@@ -621,29 +645,30 @@ h2::after {
 }
 
 .project-card h3 {
-    font-family: 'Inter', sans-serif; /* Use Inter for project card headings */
+    font-family: 'Inter', sans-serif;
     margin-top: 0;
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color: var(--link-color);
     font-size: 1.6rem;
     line-height: 1.3;
-    font-weight: 700; /* Bold */
+    font-weight: 700;
 }
 
 .project-card p {
     font-size: 1rem;
     color: var(--text-color);
     margin-bottom: 20px;
-    flex-grow: 1; /* Allow text to grow and push links down */
+    flex-grow: 1;
 }
 
 .project-links {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap;
     gap: 15px;
-    margin-top: 20px; /* Space between description and buttons */
-    justify-content: center; /* Center buttons */
+    margin-top: 20px;
+    justify-content: center;
 }
+
 
 /* --- Resume Section --- */
 .resume-section {
@@ -661,82 +686,74 @@ h2::after {
 
 .resume-viewer {
     width: 100%;
-    height: 800px; /* Adjust height as needed for your PDF */
+    height: 800px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
     box-shadow: 0 4px 15px var(--shadow-color);
-    overflow: hidden; /* Hide scrollbars if PDF viewer has its own */
+    overflow: hidden;
 }
 
-/* --- Contact Section --- */
-.contact-form-container {
-    max-width: 700px;
-    margin: 40px auto 0;
+.resume-viewer iframe {
+    border: none; /* Remove iframe border */
+}
+
+
+/* --- Contact Section (Revised) --- */
+.contact-methods-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.contact-method-card {
     background-color: var(--card-bg);
-    padding: 40px;
+    padding: 30px;
     border-radius: 12px;
     box-shadow: 0 6px 20px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease;
+    text-align: center;
     border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Pushes button to bottom */
 }
 
-.contact-form {
-    display: grid;
-    gap: 20px;
+.contact-method-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px var(--shadow-color);
 }
 
-.form-group {
-    margin-bottom: 0; /* Handled by grid gap */
+.contact-method-card i {
+    font-size: 3rem;
+    color: var(--link-color);
+    margin-bottom: 20px;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: var(--primary-color);
+.contact-method-card h3 {
+    font-family: 'Inter', sans-serif;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--link-color);
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 700;
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid var(--form-border);
-    border-radius: 8px;
+.contact-method-card p {
     font-size: 1rem;
     color: var(--text-color);
-    background-color: var(--bg-color);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Makes paragraphs take available space */
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
-    box-shadow: 0 0 0 3px var(--form-focus-shadow);
-}
-
-.form-group textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-.form-group button[type="submit"] {
-    width: auto;
-    padding: 12px 30px;
-    margin-top: 10px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 8px;
-    border: none;
-    background-color: var(--button-bg);
-    color: var(--button-text);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.form-group button[type="submit"]:hover {
-    background-color: var(--button-hover-bg);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px var(--shadow-color);
+.contact-method-card .button {
+    margin-top: auto; /* Aligns buttons at the bottom */
+    width: auto; /* Revert width for cards */
+    min-width: 150px;
+    padding: 10px 20px;
+    font-size: 1rem;
 }
 
 .contact-info {
@@ -750,12 +767,7 @@ h2::after {
     margin-bottom: 10px;
 }
 
-.contact-info a {
-    color: var(--primary-color);
-    font-weight: 500;
-}
-
-.social-links {
+.social-links { /* Kept but hidden in HTML as cards are better */
     list-style: none;
     display: flex;
     justify-content: center;
@@ -765,22 +777,23 @@ h2::after {
 
 .social-links li a {
     font-size: 2.2rem;
-    color: var(--secondary-color);
+    color: var(--hero-gradient-end);
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links li a:hover {
-    color: var(--primary-color);
+    color: var(--link-color);
     transform: translateY(-5px) scale(1.1);
 }
 
+
 /* --- Footer --- */
 footer {
-    background-color: var(--footer-bg);
+    background: var(--footer-bg);
     color: var(--footer-text);
     text-align: center;
-    padding: 25px 0;
-    margin-top: auto; /* Pushes footer to the bottom */
+    padding: 2rem 0;
+    margin-top: auto;
     box-shadow: 0 -2px 10px var(--shadow-color);
     transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
@@ -790,29 +803,30 @@ footer p {
     opacity: 0.8;
 }
 
+
 /* --- Project Modal Styling --- */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1002; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1002;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
-    backdrop-filter: blur(5px); /* Frosted glass effect */
-    -webkit-backdrop-filter: blur(5px); /* For Safari */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    padding: 20px; /* Padding for small screens */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .modal.active {
-    display: flex; /* Show the modal */
+    display: flex;
     opacity: 1;
     visibility: visible;
 }
@@ -825,14 +839,14 @@ footer p {
     max-width: 800px;
     position: relative;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-    animation: fadeInScale 0.3s ease-out forwards; /* Entry animation */
-    max-height: 90vh; /* Max height for scrollable content */
-    overflow-y: auto; /* Enable scrolling within the modal content */
+    animation: fadeInScale 0.3s ease-out forwards;
+    max-height: 90vh;
+    overflow-y: auto;
     border: 1px solid var(--border-color);
 }
 
 .close-button {
-    color: var(--secondary-color);
+    color: var(--text-color); /* Adjust close button color */
     position: absolute;
     top: 15px;
     right: 25px;
@@ -844,18 +858,18 @@ footer p {
 
 .close-button:hover,
 .close-button:focus {
-    color: var(--primary-color);
+    color: var(--link-color);
     transform: rotate(90deg);
 }
 
 #modalProjectTitle {
-    font-family: 'Inter', sans-serif; /* Use Inter for modal title */
+    font-family: 'Inter', sans-serif;
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--link-color);
     margin-bottom: 25px;
     text-align: center;
     line-height: 1.2;
-    font-weight: 800; /* Extra bold */
+    font-weight: 800;
 }
 
 .modal-body {
@@ -881,20 +895,20 @@ footer p {
 }
 
 .modal-section h4 {
-    font-family: 'Inter', sans-serif; /* Use Inter for modal section headings */
+    font-family: 'Inter', sans-serif;
     font-size: 1.3rem;
-    color: var(--secondary-color);
+    color: var(--link-color);
     margin-top: 0;
     margin-bottom: 15px;
     display: flex;
     align-items: center;
     gap: 10px;
-    font-weight: 600; /* Semi-bold */
+    font-weight: 600;
 }
 
 .modal-section h4 i {
     font-size: 1.2em;
-    color: var(--primary-color);
+    color: var(--hero-gradient-end);
 }
 
 .modal-links {
@@ -907,7 +921,7 @@ footer p {
     border-top: 1px dashed var(--border-color);
 }
 
-/* Modal animation */
+/* Modal entry animation */
 @keyframes fadeInScale {
     from {
         opacity: 0;
@@ -919,14 +933,15 @@ footer p {
     }
 }
 
+
 /* --- Scroll to Top Button --- */
 #scrollToTopBtn {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--button-bg);
+    color: var(--button-text);
     border: none;
     border-radius: 50%;
     width: 50px;
@@ -941,16 +956,17 @@ footer p {
 }
 
 #scrollToTopBtn:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--button-hover-bg);
     transform: translateY(-5px) scale(1.05);
 }
 
+
 /* --- Responsive Adjustments --- */
 @media (max-width: 992px) {
-    .hero-content h1 {
-        font-size: 5rem; /* Slightly smaller on tablets */
+    #introName {
+        font-size: clamp(3rem, 10vw, 7rem); /* Adjusted for tablets */
     }
-    .hero-content p {
+    .tagline {
         font-size: 1.4rem;
     }
     h2 {
@@ -967,10 +983,10 @@ footer p {
     }
 
     .nav-links {
-        display: none; /* Hide desktop nav links */
+        display: none;
         flex-direction: column;
         position: absolute;
-        top: 65px; /* Adjust based on navbar height */
+        top: 65px;
         left: 0;
         width: 100%;
         background-color: var(--nav-bg);
@@ -978,15 +994,15 @@ footer p {
         padding: 20px 0;
         text-align: center;
         transition: transform 0.3s ease-out;
-        transform: translateY(-100%); /* Start off-screen */
+        transform: translateY(-100%);
         z-index: 999;
-        max-height: calc(100vh - 65px); /* Max height to prevent overflow */
-        overflow-y: auto; /* Enable scroll if nav items exceed screen height */
+        max-height: calc(100vh - 65px);
+        overflow-y: auto;
     }
 
     .nav-links.open {
-        display: flex; /* Show when open */
-        transform: translateY(0); /* Slide in */
+        display: flex;
+        transform: translateY(0);
     }
 
     .nav-links li {
@@ -996,26 +1012,26 @@ footer p {
     .nav-links li a {
         font-size: 1.3rem;
         padding: 10px 0;
-        display: block; /* Make links full width for easier tapping */
+        display: block;
     }
 
     .nav-toggle {
-        display: flex; /* Show hamburger button */
+        display: flex;
     }
 
     #darkModeToggle {
-        margin-left: 20px; /* Space from logo */
+        margin-left: 20px;
     }
 
-    .hero {
-        padding: 80px 0 60px;
+    #hero {
+        min-height: 80vh; /* Make hero smaller on mobile */
     }
 
-    .hero-content h1 {
-        font-size: 3.5rem; /* Smaller on mobile */
+    #introName {
+        font-size: clamp(2.5rem, 10vw, 5rem); /* Smaller on mobile */
         margin-bottom: 15px;
     }
-    .hero-content p {
+    .tagline {
         font-size: 1.2rem;
         margin-bottom: 30px;
     }
@@ -1025,7 +1041,7 @@ footer p {
         align-items: center;
     }
     .button {
-        width: 80%; /* Make buttons wider on mobile */
+        width: 80%;
         max-width: 300px;
     }
 
@@ -1059,8 +1075,9 @@ footer p {
 
     .education-grid,
     .skills-grid,
-    .projects-grid {
-        grid-template-columns: 1fr; /* Single column layout */
+    .projects-grid,
+    .contact-methods-container { /* Added contact-methods-container */
+        grid-template-columns: 1fr;
         gap: 30px;
     }
 
@@ -1077,19 +1094,15 @@ footer p {
     }
 
     .project-links {
-        flex-direction: column; /* Stack buttons vertically */
+        flex-direction: column;
         align-items: center;
     }
 
     .button {
-        width: 100%; /* Make buttons full width */
-        max-width: 250px; /* Limit max width for stacked buttons */
+        width: 100%;
+        max-width: 250px;
         padding: 10px 20px;
         font-size: 1rem;
-    }
-
-    .contact-form-container {
-        padding: 30px;
     }
 
     .modal-content {
@@ -1116,12 +1129,12 @@ footer p {
         font-size: 1.6rem;
     }
 
-    .hero-content h1 {
-        font-size: 2.5rem; /* Even smaller on very small screens */
+    #introName {
+        font-size: clamp(2rem, 10vw, 4rem);
     }
 
-    .hero-content p {
-        font-size: 1rem;
+    .tagline {
+        font-size: 0.95rem;
     }
 
     h2 {
