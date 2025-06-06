@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit-code.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">Bhavya Mistry</a>
             <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="ml-projects.html">ML Projects</a></li>
                 <li><a href="streamlit-apps.html">Streamlit Apps</a></li>
                 <li><a href="resume.html">Resume</a></li>
@@ -30,91 +31,98 @@
 
     <header class="hero">
         <div class="container hero-content">
-            <h1>Hello, I’m Bhavya Mistry</h1>
-            <p>A passionate **Machine Learning Engineer** and **Data Scientist** with a knack for building impactful predictive models and data-driven applications.</p>
+            <h1 class="intro-name">
+                <span class="animated-text">Bhavya Mistry</span>
+            </h1>
+            <p>A Data Scientist & Machine Learning Engineer crafting intelligent solutions.</p>
             <div class="hero-buttons">
-                <a href="ml-projects.html" class="button button-primary">Explore ML Projects</a>
-                <a href="streamlit-apps.html" class="button button-secondary">See Streamlit Apps</a>
+                <a href="ml-projects.html" class="button button-primary">My ML Projects <i class="fas fa-arrow-right"></i></a>
+                <a href="resume.html" class="button button-secondary-outline">View Resume <i class="fas fa-file-alt"></i></a>
             </div>
         </div>
     </header>
 
     <main class="container">
-
         <section id="about" class="about-section section-spacing">
-            <h2>About Me</h2>
+            <h2>Who Am I?</h2>
             <div class="about-content">
+                <div class="about-image-container">
+                    <img src="assets/profile.jpg" alt="Bhavya Mistry's profile picture" class="about-image">
+                </div>
                 <div class="about-text">
-                    <p>
-                        I am Bhavya Mistry, a dedicated machine learning practitioner focused on transforming complex data into actionable insights and robust, deployable solutions. My expertise encompasses **predictive analytics, natural language processing, image processing, and advanced clustering techniques**. I thrive on the challenge of building sophisticated models that not only perform exceptionally but also deliver tangible value in real-world scenarios.
-                    </p>
-                    <p>
-                        With a strong foundation in data science principles and a keen eye for detail, I am constantly exploring new algorithms, optimizing model performance, and crafting innovative solutions. I am passionate about leveraging the power of AI to solve complex problems and contribute meaningfully to the evolving landscape of technology.
-                    </p>
+                    <p>Hello! I'm Bhavya Mistry, a passionate **Data Scientist** and **Machine Learning Engineer** with a knack for transforming complex data into actionable insights and robust predictive models. My journey in the world of data began with a fascination for how information can drive intelligent decisions and solve real-world problems.</p>
+                    <p>I specialize in developing end-to-end machine learning solutions, from data collection and preprocessing to model deployment and monitoring. My expertise spans various domains, including **Natural Language Processing (NLP)**, **Computer Vision**, and **predictive analytics**.</p>
+                    <p>I thrive on challenges and continuously seek to learn and implement the latest advancements in AI. My goal is to leverage data science to create innovative solutions that have a tangible impact.</p>
+                    <p>Outside of coding, I enjoy exploring new technologies and contributing to open-source projects. Feel free to connect with me to discuss data, technology, or potential collaborations!</p>
                 </div>
             </div>
         </section>
 
         <section id="education" class="education-section section-spacing">
-            <h2>Education</h2>
+            <h2>My Academic Journey</h2>
             <div class="education-grid">
-                <div class="education-item card-hover-effect">
-                    <h3>Master of Science in Data Science</h3>
-                    <p class="institution">Your University Name | 2024 - 2026 (Expected)</p>
-                    <p class="details">Specialized in advanced machine learning, deep learning architectures, big data analytics, and effective data visualization. Focus on practical application and deployment strategies.</p>
+                <div class="education-item">
+                    <i class="fas fa-university"></i>
+                    <h3>XYZ University</h3>
+                    <p>Master of Science in Data Science</p>
+                    <p>GPA: 3.9/4.0</p>
+                    <p class="duration">2023 - 2025</p>
                 </div>
-                <div class="education-item card-hover-effect">
-                    <h3>Bachelor of Technology in Computer Engineering</h3>
-                    <p class="institution">Another University Name | 2020 - 2024</p>
-                    <p class="details">Comprehensive study of algorithms, data structures, software engineering principles, and system design, forming a strong technical base for AI/ML.</p>
+                <div class="education-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>ABC College</h3>
+                    <p>Bachelor of Technology in Computer Engineering</p>
+                    <p>Graduated with Honors</p>
+                    <p class="duration">2019 - 2023</p>
                 </div>
-            </div>
+                </div>
         </section>
 
         <section id="skills" class="skills-section section-spacing">
-            <h2>My Expertise</h2>
+            <h2>My Toolkit</h2>
+            <p class="section-description">A comprehensive overview of the technologies and methodologies I employ to build intelligent systems and analyze data effectively.</p>
             <div class="skills-grid">
-                <div class="skill-category card-hover-effect">
+                <div class="skill-category">
                     <h3><i class="fas fa-code"></i> Programming & Libraries</h3>
-                    <ul>
-                        <li>Python (Pandas, NumPy, Scikit-learn, TensorFlow, Keras, PyTorch)</li>
-                        <li>SQL (PostgreSQL, MySQL)</li>
-                        <li>Git & GitHub</li>
+                    <ul class="skills-list">
+                        <li><i class="fab fa-python"></i> Python</li>
+                        <li><i class="fas fa-flask"></i> Flask</li>
+                        <li><i class="fas fa-robot"></i> Scikit-learn</li>
+                        <li><i class="fas fa-brain"></i> TensorFlow / Keras</li>
+                        <li><i class="fas fa-lightbulb"></i> PyTorch</li>
+                        <li><i class="fas fa-newspaper"></i> NLTK / SpaCy</li>
+                        <li><i class="fas fa-image"></i> OpenCV</li>
+                        <li><i class="fas fa-chart-line"></i> NumPy / Pandas</li>
                     </ul>
                 </div>
-                <div class="skill-category card-hover-effect">
-                    <h3><i class="fas fa-brain"></i> ML & Deep Learning</h3>
-                    <ul>
-                        <li>Supervised/Unsupervised Learning</li>
-                        <li>Natural Language Processing (NLP)</li>
-                        <li>Computer Vision (CV)</li>
-                        <li>Predictive Modeling & Time Series</li>
-                        <li>Clustering & Classification</li>
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Databases & Tools</h3>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-database"></i> SQL (PostgreSQL, MySQL)</li>
+                        <li><i class="fas fa-server"></i> MongoDB</li>
+                        <li><i class="fas fa-cloud"></i> AWS (S3, EC2, SageMaker)</li>
+                        <li><i class="fas fa-laptop-code"></i> Docker</li>
+                        <li><i class="fab fa-git-alt"></i> Git / GitHub</li>
+                        <li><i class="fas fa-cube"></i> Apache Spark</li>
+                        <li><i class="fas fa-power-off"></i> Tableau / Power BI</li>
+                        <li><i class="fas fa-file-csv"></i> Excel</li>
                     </ul>
                 </div>
-                <div class="skill-category card-hover-effect">
-                    <h3><i class="fas fa-cogs"></i> Tools & Deployment</h3>
-                    <ul>
-                        <li>Streamlit</li>
-                        <li>Jupyter Notebook/Lab</li>
-                        <li>Docker (Basic)</li>
-                        <li>Cloud Platforms (AWS/GCP basics)</li>
-                        <li>API Development (Basic)</li>
-                    </ul>
-                </div>
-                <div class="skill-category card-hover-effect">
-                    <h3><i class="fas fa-chart-line"></i> Data Science Workflow</h3>
-                    <ul>
-                        <li>Data Collection & Cleaning</li>
-                        <li>Exploratory Data Analysis (EDA)</li>
-                        <li>Feature Engineering & Selection</li>
-                        <li>Model Evaluation & Tuning</li>
-                        <li>Data Visualization (Matplotlib, Seaborn)</li>
+                <div class="skill-category">
+                    <h3><i class="fas fa-cogs"></i> ML & Data Science</h3>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-chart-pie"></i> Data Cleaning & Preprocessing</li>
+                        <li><i class="fas fa-compass"></i> Exploratory Data Analysis</li>
+                        <li><i class="fas fa-hat-wizard"></i> Feature Engineering</li>
+                        <li><i class="fas fa-layer-group"></i> Supervised Learning</li>
+                        <li><i class="fas fa-users"></i> Unsupervised Learning</li>
+                        <li><i class="fas fa-microchip"></i> Deep Learning</li>
+                        <li><i class="fas fa-search"></i> Model Evaluation & Tuning</li>
+                        <li><i class="fas fa-globe"></i> MLOps Fundamentals</li>
                     </ul>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer>
@@ -123,6 +131,36 @@
         </div>
     </footer>
 
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modalProjectTitle"></h3>
+            <div class="modal-body">
+                <p id="modalLongDescription"></p>
+                <div class="modal-section">
+                    <h4><i class="fas fa-tools"></i> Technologies Used</h4>
+                    <p id="modalTechnologies"></p>
+                </div>
+                <div class="modal-section">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Challenges Faced</h4>
+                    <p id="modalChallenges"></p>
+                </div>
+                <div class="modal-section">
+                    <h4><i class="fas fa-lightbulb"></i> Solutions & Outcomes</h4>
+                    <p id="modalOutcomes"></p>
+                </div>
+                <div class="modal-links">
+                    <a id="modalGithubLink" href="#" target="_blank" rel="noopener" class="button button-secondary-outline"><i class="fab fa-github"></i> View Code on GitHub</a>
+                    <a id="modalLiveAppLink" href="#" target="_blank" rel="noopener" class="button button-primary" style="display: none;"><i class="fas fa-external-link-alt"></i> Try Live App</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="scrollToTopBtn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/your-font-awesome-kit-code.js" crossorigin="anonymous"></script> </body>
+</body>
 </html>
