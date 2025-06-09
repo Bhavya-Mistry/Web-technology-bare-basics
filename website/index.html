@@ -1,172 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bhavya Mistry | ML & Data Science</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-font-awesome-kit-code.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <!-- Google Fonts: Poppins for elegant typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="lock-scroll">
-    <div class="curtain left"></div>
-    <div class="curtain right"></div>
-
-    <nav class="navbar reveal">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Bhavya Mistry</a>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="ml-projects.html">ML Projects</a></li>
-                <li><a href="streamlit-apps.html">Streamlit Apps</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-                <li>
-                    <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
-                </li>
+<body>
+    <!-- Navbar: Sticky and responsive with smooth scroll links -->
+    <nav id="navbar">
+        <div class="container flex justify-between items-center py-4">
+            <!-- Portfolio Logo/Name -->
+            <a href="#hero" class="nav-brand">Your Name</a>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Tech Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
             </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
-                <span class="hamburger"></span>
-            </button>
         </div>
     </nav>
 
-    <header id="hero">
-        <div class="hero-content">
-            <h1 id="introName">Bhavya Mistry</h1>
-            <p class="tagline reveal">Turning Data Into Decisions</p>
-            <!-- <div class="hero-buttons reveal">
-                <a href="ml-projects.html" class="button button-primary">My ML Projects <i class="fas fa-arrow-right"></i></a>
-                <a href="resume.html" class="button button-secondary-outline">View Resume <i class="fas fa-file-alt"></i></a>
-            </div> -->
+    <!-- Hero Section: Introduction -->
+    <section id="hero" class="hero-section flex items-center justify-center text-center">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Hi, I'm <span class="text-gold">Your Name</span>.</h1>
+            <p class="subtitle">A passionate Developer and Data Scientist.</p>
+            <a href="#contact" class="btn btn-primary">Let's Connect</a>
         </div>
-    </header>
+    </section>
 
-    <main class="container">
-        <section id="about" class="about-section section-spacing reveal">
-            <h2>Who Am I?</h2>
+    <!-- About Me Section -->
+    <section id="about" class="section">
+        <div class="container" data-aos="fade-up">
+            <h2>About Me</h2>
             <div class="about-content">
-                <div class="about-image-container reveal">
-                    <img src="assets/profile.jpg" alt="Bhavya Mistry's profile picture" class="about-image">
-                </div>
-                <div class="about-text reveal">
-                    <p>Hi, I’m a B.Tech IT student passionate about Artificial Intelligence, Machine Learning, and Data Science.</p>
-                    <p>I enjoy working with data, building smart solutions, and exploring how technology can solve real-world problems.</p>
-                    <p>My focus is on learning by doing—whether it's developing predictive models, experimenting with ML libraries, or building simple web apps. I'm currently exploring tools like FastAPI, OpenCV, and Keras to deepen my understanding of the AI/ML ecosystem.</p>
-                    <p>I'm driven by curiosity, and I'm always excited to take on challenges that push me to grow.</p>
-                </div>
+                <img src="https://placehold.co/200x200/B8860B/0A3D2F?text=Profile" alt="Your Profile Picture" class="profile-pic">
+                <p>
+                    Greetings! I'm Your Name, a dedicated and innovative professional with a strong background in software development and data science. My journey in tech is driven by a curiosity to solve complex problems and build impactful solutions. I specialize in areas like machine learning, web development, and data visualization, constantly seeking to expand my knowledge and skills.
+                </p>
+                <p>
+                    Beyond the code, I am an avid learner, always exploring new technologies and methodologies to stay ahead in this dynamic industry. I thrive in collaborative environments and am passionate about contributing to projects that make a real difference.
+                </p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="education" class="education-section section-spacing reveal">
-            <h2>My Academic Journey</h2>
+    <!-- Education Section -->
+    <section id="education" class="section bg-light">
+        <div class="container" data-aos="fade-up">
+            <h2>Education</h2>
             <div class="education-grid">
-                <div class="education-item reveal">
-                    <i class="fas fa-university"></i>
-                    <h3>Indus University, Gujarat</h3>
-                    <p>B.Tech IT</p>
-                    <p>CGPA: 9.55 / 10</p>
-                    <p class="duration">2022 – Present (Expected Graduation: 2026)</p>
+                <div class="education-item card">
+                    <h3>Master of Science in Computer Science</h3>
+                    <p>University Name, City, State</p>
+                    <p class="text-gold">Graduation: May 20XX</p>
+                    <ul>
+                        <li>Specialization: Artificial Intelligence & Machine Learning</li>
+                        <li>Relevant Coursework: Advanced Algorithms, Deep Learning, Big Data Analytics</li>
+                    </ul>
                 </div>
-
-                <div class="education-item reveal">
-                    <i class="fas fa-school"></i>
-                    <h3>AG High School and G & D Parikh Higher Secondary School</h3>
-                    <p>HSC (Science Stream)</p>
-                    <p>Percentile Rank: 59.30</p>
-                    <p class="duration">Completed in 2022</p>
-                </div>
-
-                <div class="education-item reveal">
-                    <i class="fas fa-school"></i>
-                    <h3>S.H. Kharawala Primary School</h3>
-                    <p>SSC</p>
-                    <p>Percentile Rank: 93.95</p>
-                    <p class="duration">Completed in 2020</p>
+                <div class="education-item card">
+                    <h3>Bachelor of Technology in Information Technology</h3>
+                    <p>Another University, City, State</p>
+                    <p class="text-gold">Graduation: May 20XX</p>
+                    <ul>
+                        <li>Focus: Software Engineering, Database Management</li>
+                        <li>Awards: Dean's List, Academic Excellence Scholarship</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="skills" class="skills-section section-spacing reveal">
-            <h2>My Tech Stack</h2>
-            <p class="section-description reveal">A comprehensive overview of the technologies and methodologies I employ to build intelligent systems and analyze data effectively.</p>
+    <!-- Tech Skills Section -->
+    <section id="skills" class="section">
+        <div class="container" data-aos="fade-up">
+            <h2>Tech Skills</h2>
             <div class="skills-grid">
-                <div class="skill-category reveal">
-                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                    <ul class="skills-list">
-                        <li><i class="fab fa-python"></i> Python</li>
-                        <li><i class="fas fa-flask"></i> SQL </li>
-                        
+                <div class="skill-category card">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>Java</li>
+                        <li>SQL</li>
+                        <li>R</li>
                     </ul>
                 </div>
-                
-                <div class="skill-category reveal">
-                    <h3><i class="fas fa-cogs"></i> ML & Data Science</h3>
-                    <ul class="skills-list">
-                        <li><i class="fas fa-chart-pie"></i> Data Cleaning & Preprocessing</li>
-                        <li><i class="fas fa-compass"></i> Exploratory Data Analysis</li>
-                        <li><i class="fas fa-hat-wizard"></i> Feature Engineering</li>
-                        <li><i class="fas fa-layer-group"></i> Supervised Learning</li>
-                        <li><i class="fas fa-users"></i> Unsupervised Learning</li>
-                        <li><i class="fas fa-search"></i> Model Evaluation & Tuning</li>
-                        <li><i class="fas fa-globe"></i> Basic UI with Streamlit</li>
-                        <li><i class="fas fa-code-branch"></i> API Deployment with FastAPI</li>
-                    </ul>
-                </div>  
-                
-                <div class="skill-category reveal">
-                    <h3><i class="fas fa-database"></i> Libraries</h3>
-                    <ul class="skills-list">
-                        <li><i class="fas fa-robot"></i> Pandas</li>
-                        <li><i class="fas fa-brain"></i> NumPy</li>
-                        <li><i class="fas fa-lightbulb"></i> Scikit-learn</li>
-                        <li><i class="fas fa-newspaper"></i> Matplotlib</li>
-                        <li><i class="fas fa-image"></i> Seaborn</li>
-                        <li><i class="fas fa-chart-line"></i> FastiAPI</li>
+                <div class="skill-category card">
+                    <h3>Frameworks & Libraries</h3>
+                    <ul>
+                        <li>React.js</li>
+                        <li>Node.js</li>
+                        <li>TensorFlow</li>
+                        <li>PyTorch</li>
+                        <li>Scikit-learn</li>
+                        <li>Pandas, NumPy</li>
+                        <li>Streamlit</li>
+                        <li>Tailwind CSS</li>
                     </ul>
                 </div>
-                
+                <div class="skill-category card">
+                    <h3>Tools & Platforms</h3>
+                    <ul>
+                        <li>Git, GitHub</li>
+                        <li>Docker</li>
+                        <li>AWS, Google Cloud Platform (GCP)</li>
+                        <li>Jupyter Notebooks</li>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+                <div class="skill-category card">
+                    <h3>Databases & DevOps</h3>
+                    <ul>
+                        <li>MongoDB</li>
+                        <li>PostgreSQL</li>
+                        <li>Firebase</li>
+                        <li>CI/CD</li>
+                    </ul>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer class="reveal">
-        <div class="container">
-            <p>© 2025 Bhavya Mistry. All rights reserved.</p>
+    <!-- Certifications Section -->
+    <section id="certifications" class="section bg-light">
+        <div class="container" data-aos="fade-up">
+            <h2>Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-item card">
+                    <h3>Machine Learning Engineer Nanodegree</h3>
+                    <p>Udacity</p>
+                    <p class="text-gold">Issued: Jan 20XX</p>
+                </div>
+                <div class="certification-item card">
+                    <h3>AWS Certified Developer - Associate</h3>
+                    <p>Amazon Web Services</p>
+                    <p class="text-gold">Issued: Mar 20XX</p>
+                </div>
+                <div class="certification-item card">
+                    <h3>Google Cloud Professional Data Engineer</h3>
+                    <p>Google Cloud</p>
+                    <p class="text-gold">Issued: Sep 20XX</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container" data-aos="fade-up">
+            <h2>Experience</h2>
+            <div class="experience-list">
+                <div class="experience-item card">
+                    <h3>Software Engineer - Tech Solutions Inc.</h3>
+                    <p class="text-gold">June 20XX - Present</p>
+                    <ul>
+                        <li>Developed and maintained scalable backend services using Node.js and MongoDB, improving API response times by 20%.</li>
+                        <li>Implemented CI/CD pipelines, reducing deployment time by 30%.</li>
+                        <li>Collaborated with product teams to translate requirements into technical specifications.</li>
+                    </ul>
+                </div>
+                <div class="experience-item card">
+                    <h3>Data Scientist Intern - Innovate Analytics</h3>
+                    <p class="text-gold">May 20XX - Aug 20XX</p>
+                    <ul>
+                        <li>Designed and implemented machine learning models for customer churn prediction, achieving 85% accuracy.</li>
+                        <li>Utilized Python (Pandas, Scikit-learn) for data cleaning, analysis, and model training.</li>
+                        <li>Presented findings and recommendations to senior stakeholders.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-light">
+        <div class="container" data-aos="fade-up">
+            <h2>Projects</h2>
+            <div class="project-category">
+                <h3>Machine Learning Projects</h3>
+                <div class="projects-grid">
+                    <div class="project-item card">
+                        <h4>Sentiment Analysis for Social Media</h4>
+                        <p>Developed a deep learning model using TensorFlow to analyze sentiment from Twitter data. Achieved 90% accuracy.</p>
+                        <a href="#" class="project-link text-gold" target="_blank">View Project</a>
+                    </div>
+                    <div class="project-item card">
+                        <h4>Image Classification with CNNs</h4>
+                        <p>Built a convolutional neural network to classify images of various objects, trained on the CIFAR-10 dataset.</p>
+                        <a href="#" class="project-link text-gold" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-category mt-8">
+                <h3>Streamlit Apps</h3>
+                <div class="projects-grid">
+                    <div class="project-item card">
+                        <h4>Interactive Data Dashboard</h4>
+                        <p>A Streamlit application for interactive visualization of sales data, allowing users to filter and analyze trends.</p>
+                        <a href="#" class="project-link text-gold" target="_blank">View App</a>
+                    </div>
+                    <div class="project-item card">
+                        <h4>Resume Parser</h4>
+                        <p>Developed a Streamlit app that extracts key information from resumes using NLP techniques.</p>
+                        <a href="#" class="project-link text-gold" target="_blank">View App</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section id="contact" class="section">
+        <div class="container" data-aos="fade-up">
+            <h2>Contact Me</h2>
+            <div class="contact-content card">
+                <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><img src="https://placehold.co/32x32/0A3D2F/B8860B?text=LI" alt="LinkedIn"></a>
+                    <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub"><img src="https://placehold.co/32x32/0A3D2F/B8860B?text=GH" alt="GitHub"></a>
+                    <a href="mailto:youremail@example.com" aria-label="Email"><img src="https://placehold.co/32x32/0A3D2F/B8860B?text=EM" alt="Email"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center py-4">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
         </div>
     </footer>
 
-    <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h3 id="modalProjectTitle"></h3>
-            <div class="modal-body">
-                <p id="modalLongDescription"></p>
-                <div class="modal-section">
-                    <h4><i class="fas fa-tools"></i> Technologies Used</h4>
-                    <p id="modalTechnologies"></p>
-                </div>
-                <div class="modal-section">
-                    <h4><i class="fas fa-exclamation-triangle"></i> Challenges Faced</h4>
-                    <p id="modalChallenges"></p>
-                </div>
-                <div class="modal-section">
-                    <h4><i class="fas fa-lightbulb"></i> Solutions & Outcomes</h4>
-                    <p id="modalOutcomes"></p>
-                </div>
-                <div class="modal-links">
-                    <a id="modalGithubLink" href="#" target="_blank" rel="noopener" class="button button-secondary-outline"><i class="fab fa-github"></i> View Code on GitHub</a>
-                    <a id="modalLiveAppLink" href="#" target="_blank" rel="noopener" class="button button-primary" style="display: none;"><i class="fas fa-external-link-alt"></i> Try Live App</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <button id="scrollToTopBtn" aria-label="Scroll to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
+    <!-- AOS JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
