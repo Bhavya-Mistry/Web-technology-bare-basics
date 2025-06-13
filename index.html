@@ -1,117 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bhavya Mistry | ML Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavya Mistry | AI & ML Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container nav-container">
-      <a href="#" class="logo">Bhavya Mistry</a>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
-          <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
-        </li>
-      </ul>
-      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
-        ☰
-      </button>
-    </div>
-  </nav>
 
-  <header class="hero">
-    <div class="container hero-content">
-      <h1>Hello, I’m Bhavya Mistry</h1>
-      <p>A passionate machine learning enthusiast exploring data science, AI, and predictive models.</p>
-    </div>
-  </header>
-
-  <main class="container">
-
-    <section id="about" class="about-section">
-      <h2>About Me</h2>
-      <p>
-        I am Bhavya Mistry, a dedicated machine learning practitioner with hands-on experience in predictive analytics,
-        natural language processing, image processing, and clustering techniques. I love turning data into actionable insights and building models that make a difference.
-      </p>
-    </section>
-
-    <section id="projects" class="projects-section">
-      <h2>Machine Learning Projects</h2>
-      <div class="projects-grid">
-        <article class="project-card">
-          <h3>Basic Text Summarization</h3>
-          <p>Summarize large texts into concise, informative summaries using NLP techniques.</p>
-          <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Basic-text-summarization" target="_blank" rel="noopener">View on GitHub</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Flight Price Prediction</h3>
-          <p>Predict flight prices based on historical data, date, airline, and destination features.</p>
-          <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Flight-price-prediction" target="_blank" rel="noopener">View on GitHub</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Iris Classification</h3>
-          <p>Identify iris species from flower measurements using classification models.</p>
-          <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Iris-classification" target="_blank" rel="noopener">View on GitHub</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Mini Projects</h3>
-          <p>Collection of smaller ML projects showcasing different algorithms and techniques.</p>
-          <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Mini-Projects" target="_blank" rel="noopener">View on GitHub</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Single Image Dehazing</h3>
-          <p>Remove haze from images to improve clarity using image processing models.</p>
-          <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Single-Image-Dehazing" target="_blank" rel="noopener">View on GitHub</a>
-        </article>
-
-        <article class="project-card">
-          <h3>SmartHealth Predictive Analyzer</h3>
-          <p>Analyze health data and predict potential health issues with ML models.</p>
-          <a href="https://github.com/Bhavya-Mistry/ML/tree/main/SmartHealth-Predictive-Analyzer" target="_blank" rel="noopener">View on GitHub</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Titanic Survival Prediction</h3>
-          <p>Predict Titanic passenger survival chances using historical datasets.</p>
-          <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Titanic-survival" target="_blank" rel="noopener">View on GitHub</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Customer Segmentation</h3>
-          <p>Segment customers into groups for targeted marketing using clustering.</p>
-          <a href="https://github.com/Bhavya-Mistry/ML/tree/main/customer-segmentation" target="_blank" rel="noopener">View on GitHub</a>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-      <h2>Contact Me</h2>
-      <p>Feel free to reach out via email or follow me on social media.</p>
-      <ul class="social-links">
-        <li><a href="mailto:bhavya@example.com" aria-label="Send email to Bhavya Mistry">📧 Email</a></li>
-        <li><a href="www.linkedin.com/in/bhavya-mistry-5b5a57293" target="_blank" rel="noopener" aria-label="Visit Bhavya Mistry LinkedIn profile">🔗 LinkedIn</a></li>
-        <li><a href="https://github.com/Bhavya-Mistry" target="_blank" rel="noopener" aria-label="Visit Bhavya Mistry GitHub profile">🐙 GitHub</a></li>
-        <!-- <li><a href="https://twitter.com/bhavyamistry" target="_blank" rel="noopener" aria-label="Visit Bhavya Mistry Twitter profile">🐦 Twitter</a></li> -->
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>© 2025 Bhavya Mistry. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <main class="container">
+        <section id="about" class="about-section">
+            <div class="intro-text">
+                <h1>Bhavya Mistry</h1>
+                <p>B.Tech student exploring machine learning and data science. Passionate about building predictive models and developing intelligent, data-driven applications.</p>
+            </div>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Data Science Intern | Prodigy Infotech</h3>
+                <p class="duration">1 May 2025 – 31 May 2025</p>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                 <div class="project-card">
+                    <h3>Iris Classification</h3>
+                    <p>This project uses a Decision Tree Classifier to predict the species of an iris flower based on its features.</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Iris-classification" target="_blank" class="button"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Smart Health Predictor</h3>
+                    <p>Used Linear and Decision Tree Regression to predict flight prices, with a focus on feature engineering from multiple data types.</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Flight%20Price%20Prediction%20%5BRegression%5D" target="_blank" class="button"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                 <div class="project-card">
+                    <h3>Customer Segmentation</h3>
+                    <p>Applied RFM (Recency, Frequency, Monetary) analysis combined with K-Means clustering to segment customers of an online retail store.</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Titanic-survival" target="_blank" class="button"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Titanic survival</h3>
+                    <p>A machine learning classification task aimed at predicting whether passengers survived the Titanic disaster based on various features such as age, gender, class, and other details.</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Titanic-survival" target="_blank" class="button"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Flight Price Prediction</h3>
+                    <p>This project aims to predict the flight prices based on various features using machine learning models, including Linear Regression and Decision Tree Regression</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Flight-price-prediction" target="_blank" class="button"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Basic Text Summerization</h3>
+                    <p>Build a model that summeries the given text using NLP</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Spam%20Email%20Dectection" target="_blank" class="button"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Single Image Dehazing</h3>
+                    <p>Project focused on removing haze from images by estimating the atmospheric light and transmission map using the Dark Channel Prior method to output a clear haze-free image</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Bhavya-Mistry/ML/tree/main/Single-Image-Dehazing" target="_blank" class="button"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Basic Resume App</h3>
+                    <p>A simple Streamlit application that showcases information about me.</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Bhavya-Mistry/Streamlit-Apps/tree/main/basic-resume" target="_blank" class="button"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://bhavyamistryresume.streamlit.app/" target="_blank" class="button secondary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Iris Classification App</h3>
+                    <p>A Streamlit web application that allows you to explore and compare different machine learning classifiers (KNN, SVM, Random Forest) on the famous Iris dataset</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Bhavya-Mistry/Streamlit-Apps/tree/main/iris_streamlit" target="_blank" class="button"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://irisdataset.streamlit.app/" target="_blank" class="button secondary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Customer Segmentation App</h3>
+                    <p>A Customer Segmentation Tool built using KMeans clustering for classifying customers into segments based on their Recency, Frequency, and Monetary values (RFM)</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Bhavya-Mistry/Streamlit-Apps/tree/main/customer-segmentation" target="_blank" class="button"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://customerssegmentation.streamlit.app/" target="_blank" class="button secondary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Flight Price Prediction App</h3>
+                    <p>An app that predicts price of flight by taking various inputs as flight, duration, source, destination and more.</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Bhavya-Mistry/Streamlit-Apps/tree/main/flight-price-prediction" target="_blank" class="button"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://flight-prices-prediction.streamlit.app/" target="_blank" class="button secondary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Salary Prediction</h3>
+                    <p>A Streamlit app that predicts salary based on years of experience using a basic linear regression model</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Bhavya-Mistry/Streamlit-Apps/tree/main/iris_streamlit" target="_blank" class="button"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://salary-predictor-model.streamlit.app/" target="_blank" class="button secondary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="grid-section">
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <span>Python</span>
+                    <span>SQL</span>
+                </div><br>
+                <div class="skills-grid">
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>NumPy</span>
+                    <span>Pandas</span>
+                    <span>Scikit-learn</span>
+                    <span>Matplotlib</span>
+                    <span>Seaborn</span>
+                    <span>Streamlit</span>
+                    <span>VS Code</span>
+                    <span>Git & GitHub</span>
+                </div><br>
+                <div class="skills-grid">
+                    <span>VS Code</span>
+                    <span>Git & GitHub</span>
+                </div><br><br>
+                <h3>Exploring</h3><br>
+                <div class="skills-grid">
+                    <span>FastAPI</span>
+                    <span>OpenCV</span>
+                    <span>Keras</span>
+                    <span>Tensor Flow</span>
+                </div><br><br>
+                <h3>Spoken Languages</h3><br>
+                <div class="skills-grid">
+                    <span>English</span>
+                    <span>Hindi</span>
+                    <span>Gujarati</span>
+                </div>
+            </section>
+            <section id="education-certs">
+                <h2>Education & Certificates</h2>
+                <div class="education-item">
+                    <h3>Indus University, Gujarat</h3>
+                    <p>B.Tech in Information Technology | Expected Graduation: 2026</p>
+                    <p>CGPA : 9.55</p>
+                </div>
+                <div class="education-item">
+                    <h3>A.G. High School and G.&D. Parikh Higher Secondary School, Gujarat</h3>
+                    <p>HSC | 2022</p>
+                    <p>Percentage : 57%</p>
+                </div>
+                <div class="education-item">
+                    <h3>S.H. Kharawala Primary School, Gujarat</h3>
+                    <p>SSC | 2020</p>
+                    <p>Percentage : 75%</p>
+                </div>
+                <ul class="certifications-list">
+                    <ul>
+                    <li>AI – Indus University (2024)</li>    
+                    <li>Getting Started with Machine Learning Algorithms – Simpli Learn (2024)</li>
+                    <li>Introduction to SQL – Simpli Learn (2024)</li></ul>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/bhavya-mistry-5b5a57293/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Bhavya-Mistry" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                <a href="mailto:mistrybhavya9@gmail.com" aria-label="Email Address"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="copyright">© 2024 Bhavya Mistry. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

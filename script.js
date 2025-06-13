@@ -1,21 +1,43 @@
-// Dark mode toggle button
-const darkModeToggle = document.getElementById('darkModeToggle');
-const body = document.body;
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-darkModeToggle.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-  if (body.classList.contains('dark-mode')) {
-    darkModeToggle.textContent = '☀️';
-  } else {
-    darkModeToggle.textContent = '🌙';
-  }
-});
+    // Toggle mobile navigation
+    if (navToggle) {
+        navToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active'); // For hamburger animation
+        });
+    }
 
-// Mobile nav toggle
-const navToggleBtn = document.querySelector('.nav-toggle');
-const navLinks = document.getElementById('nav-links');
+    // Smooth scroll for navigation links & close mobile menu on click
+    document.querySelectorAll('.nav-links a, .nav-brand').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            // Check if the link is a standard anchor link
+            if (this.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
 
-navToggleBtn.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('open');
-  navToggleBtn.setAttribute('aria-expanded', isOpen);
+                // Close mobile nav if it's open
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    navToggle.classList.remove('active');
+                }
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    // Account for the height of the sticky navbar
+                    const offset = document.querySelector('.navbar').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
 });

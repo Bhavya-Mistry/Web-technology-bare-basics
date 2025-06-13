@@ -1,0 +1,266 @@
+/* --- Modern & Minimal Portfolio CSS --- */
+
+/* 1. VARIABLES & GLOBAL STYLES */
+:root {
+    --green-olive: #4A5C50; /* A sophisticated, muted olive/forest green */
+    --green-light: #eef2ef; /* A very light, complementary green for backgrounds */
+    --bg-color: #fcfcfc;    /* A clean, slightly off-white background */
+    --text-dark: #212529;   /* Near-black for primary text, easy on the eyes */
+    --text-light: #6c757d;  /* Muted grey for subtitles, dates, etc. */
+    --border-color: #e9ecef;/* Subtle border color */
+    
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --border-radius: 8px;
+    --transition-speed: 0.2s ease-out;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.65;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+section:last-of-type, .grid-section section:last-of-type {
+    border-bottom: none;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.75rem;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    color: var(--green-olive);
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+ul {
+    padding-left: 20px;
+    margin: 0;
+    list-style-position: outside;
+}
+
+/* 2. ABOUT / HERO SECTION */
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    min-height: 70vh;
+    padding: 40px 0;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--green-olive);
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 500px;
+}
+
+/* 3. EXPERIENCE & EDUCATION */
+.experience-item, .education-item {
+    padding-left: 20px;
+    border-left: 3px solid var(--green-olive);
+    margin-bottom: 2.5rem;
+}
+.experience-item:last-child {
+    margin-bottom: 0;
+}
+
+.duration {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+}
+
+.experience-item li {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+/* 4. PROJECTS SECTION */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+}
+
+.project-card h3 { color: var(--green-olive); }
+
+.project-card p {
+    flex-grow: 1;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.project-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    border: 1px solid var(--green-olive);
+    background-color: var(--green-olive);
+    color: #fff;
+    cursor: pointer;
+}
+.button:hover { background-color: #3e4f44; }
+.button i { margin-right: 8px; }
+
+.button.secondary {
+    background-color: transparent;
+    color: var(--green-olive);
+}
+.button.secondary:hover {
+    background-color: var(--green-light);
+}
+
+/* 5. SKILLS & CERTS */
+.grid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.skills-grid span {
+    background-color: var(--green-light);
+    color: var(--green-olive);
+    padding: 5px 15px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.certifications-list {
+    list-style: none;
+    padding: 0;
+}
+.certifications-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.certifications-list li:last-child {
+    border-bottom: none;
+}
+
+/* 6. FOOTER & CONTACT */
+footer {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--green-light);
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 2rem;
+}
+
+.contact-links a {
+    font-size: 1.75rem;
+    color: var(--text-light);
+    transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+.contact-links a:hover {
+    color: var(--green-olive);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* 7. RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 1.5rem; }
+    
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+        padding: 60px 0;
+    }
+    .intro-text p {
+        margin: 0 auto;
+    }
+
+    .grid-section {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    #skills {
+        padding-bottom: 60px;
+        border-bottom: 1px solid var(--border-color);
+    }
+}
